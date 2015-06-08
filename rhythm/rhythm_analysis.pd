@@ -160,7 +160,7 @@
 #X obj 661 163 list split 4;
 #X obj 661 184 list prepend;
 #X obj 248 341 pack f f;
-#X obj 334 326 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 334 326 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 349 323 <- next note;
 #X obj 334 306 list split 1;
@@ -174,7 +174,7 @@
 #X obj 454 266 list split 4;
 #X obj 540 283 list split 4;
 #X obj 661 345 pack f f;
-#X obj 747 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 747 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 762 327 <- next note;
 #X obj 747 310 list split 1;
