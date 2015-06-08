@@ -9,5 +9,6 @@ Review of the contents:
 
 "pitch" ---
 
-"rhythm" ---
+"obsolete" --- well... its name says it all... patches that we do not consider to belong anywhere specifically, that suffered modifications or that we decided to keep for whichever reason.
 
+"rhythm" ---
