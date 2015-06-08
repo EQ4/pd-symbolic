@@ -1,38 +1,37 @@
-#N canvas 619 46 703 802 10;
-#X obj 25 543 list-apply mod 12;
-#X obj 25 607 list2symbol;
-#X msg 88 586 symbol;
-#X obj 25 630 fromsymbol;
-#X obj 88 565 loadbang;
-#X obj 15 189 inlet;
-#X obj 25 652 outlet;
-#X text 25 675 angel.faraldo@upf.edu --- 2015;
+#N canvas 382 23 703 678 10;
+#X obj 25 503 list-apply mod 12;
+#X obj 25 567 list2symbol;
+#X msg 88 546 symbol;
+#X obj 25 590 fromsymbol;
+#X obj 88 525 loadbang;
+#X obj 15 169 inlet;
+#X obj 25 612 outlet;
+#X text 25 635 angel.faraldo@upf.edu --- 2015;
 #X text 12 128 This reduction allows for quick querying of chord-types
 and their inversions.;
-#X obj 25 496 t l f;
-#X obj 25 522 list-math -;
+#X obj 25 456 t l f;
+#X obj 25 482 list-math -;
 #X text 12 68 For example \, three numbers will represent all "major"
 chord inversions \, in root position (47 \, short for its intervalic
 representation 0 4 7) \, in first inversion (38) and second inversion
 (59).;
-#X obj 15 235 sort;
+#X obj 15 195 sort;
 #X text 12 8 This object receives a set of pitch integers in the form
 of a list \, for example midi note numbers and outputs an intervalic
 chordal scheme.;
-#X text 52 236 order them in low to high form...;
-#X obj 232 290 list-apply mod 12;
-#X obj 25 273 t l l;
-#X obj 248 325 PRINT;
-#X obj 100 482 PRINT;
-#X obj 301 711 list split;
-#X text 374 711 bass note;
-#X obj 554 681 list-compare;
-#X obj 266 378 list-unique;
-#X obj 275 429 PRINT;
-#X obj 254 674 PRINT;
-#X obj 232 355 list split 1;
-#X floatatom 178 402 5 0 0 0 - - -;
-#X obj 382 393 list fir;
+#X text 52 196 order them in low to high form...;
+#X obj 232 250 list-apply mod 12;
+#X obj 25 233 t l l;
+#X obj 248 285 PRINT;
+#X obj 100 442 PRINT;
+#X obj 268 538 list split;
+#X text 341 538 bass note;
+#X obj 521 508 list-compare;
+#X obj 266 338 list-unique;
+#X obj 275 389 PRINT;
+#X obj 221 501 PRINT;
+#X obj 232 315 list split 1;
+#X floatatom 178 362 5 0 0 0 - - -;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 1;

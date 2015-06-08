@@ -19,7 +19,7 @@
 to init list.;
 #X text -19 19 "bang" to retrieve filenames individually;
 #X obj -65 43 route bang refresh;
-#X obj -61 91 loadbang;
+#X obj 106 66 loadbang;
 #X obj -13 65 bang;
 #X obj -5 90 symbol \$1;
 #X obj -44 136 folder_list;
@@ -45,7 +45,7 @@ to init list.;
 #X connect 18 0 6 0;
 #X connect 18 1 20 0;
 #X connect 18 2 14 0;
-#X connect 19 0 22 0;
+#X connect 19 0 21 0;
 #X connect 20 0 21 0;
 #X connect 21 0 15 0;
 #X connect 22 0 3 0;

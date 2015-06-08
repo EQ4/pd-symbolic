@@ -96,7 +96,7 @@
 #X obj 8 97 t s b;
 #X obj 279 22 import jasch_lib;
 #X obj 8 570 + 0.1;
-#N canvas 123 23 570 718 find_key 1;
+#N canvas 123 23 570 718 find_key 0;
 #X obj 222 100 t b b;
 #X obj 214 262 t l;
 #X obj 131 345 list;
