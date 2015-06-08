@@ -1,0 +1,16 @@
+#N canvas 642 23 324 235 10;
+#X floatatom 62 138 5 0 0 0 - - -;
+#X floatatom 17 185 5 0 0 0 - - -;
+#X msg 27 41 C#;
+#X obj 17 94 tosymbol;
+#X text 56 185 pitch class (0-1);
+#X text 98 137 modality (0 = major \, 1 = minor);
+#X msg 37 61 Bbm;
+#X msg 17 21 Gbm;
+#X obj 17 117 a.key2pc;
+#X connect 2 0 3 0;
+#X connect 3 0 8 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 0;
+#X connect 8 0 1 0;
+#X connect 8 1 0 0;

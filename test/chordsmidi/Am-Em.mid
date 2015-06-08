@@ -1,0 +1,71 @@
+MFile 0 1 480
+MTrk
+0 Meta SeqName "Yamaha Grand Piano"
+0 Meta InstrName "Yamaha Grand Piano"
+0 TimeSig 16/16 24 8
+0 KeySig 0 major
+0 Meta Marker "1) Cm,Bb,Eb,Bb"
+0 SMPTE 33 0 0 0 0
+0 Tempo 480000
+0 Meta Marker "2) Am7,Gm7,Esus4,Gm7"
+0 Meta Marker "3)Am7,Gm,Am7,F7"
+0 Meta Marker "4)Dm,G,Gm7,Dm"
+0 Meta Marker "5)Am7,Am,Em7,Cm"
+0 Meta Marker "6)Em7,Gm7,Gm,Gm7"
+0 Meta Marker "7)Bmaj7,Cm7,Gm,G7"
+0 Meta Marker "8)A#m11,Bmaj7,GM,A#m11"
+0 Meta Marker "9)Fm,Gm7,Gm,Fm"
+0 Meta Marker "10)Fmajor7,Em7,Dm7,Cmajor7"
+0 Meta Marker "11)Cmajor7,Em7,Bmajor7,Cmajor7"
+0 Meta Marker "12)D5.Dm7,Dmadd9,Fmajor7"
+0 Meta Marker "13)Em,B7sus4,Amadd9,Fmajor7"
+0 Meta Marker "14)Bsus4,Em,Fmajor7,Fmajor7"
+0 Meta Marker "15)Cmajor7,Dm7,Fmajor7,Fmajor7"
+0 Meta Marker "16)Dm,Dm.Fmajor7,Fmajor7"
+0 Meta Marker "17)Asus4,Am,Em7,Fmajor7"
+0 Meta Marker "18)Fm,Em7,Dm7,Cmajor7"
+0 Meta Marker "19)Gadd9,Em7,C6,Gadd9"
+0 Meta Marker "20)Gm7,Em7,C,Fsus4"
+0 Meta Marker "21)Cmajor7,Dm7"
+0 Meta Marker "22)D,A#"
+0 Meta Marker "23)Am,Dm7"
+24 On ch=1 n=45 v=80
+24 On ch=1 n=48 v=80
+24 On ch=1 n=52 v=80
+1920 Off ch=1 n=45 v=0
+1920 Off ch=1 n=48 v=0
+1920 Off ch=1 n=52 v=0
+1920 On ch=1 n=50 v=80
+1920 On ch=1 n=53 v=80
+1920 On ch=1 n=57 v=80
+1920 On ch=1 n=60 v=80
+2760 Off ch=1 n=50 v=0
+2760 Off ch=1 n=53 v=0
+2760 Off ch=1 n=57 v=0
+2760 Off ch=1 n=60 v=0
+2880 On ch=1 n=50 v=80
+2880 On ch=1 n=53 v=80
+2880 On ch=1 n=57 v=80
+2880 On ch=1 n=60 v=80
+3000 Off ch=1 n=50 v=0
+3000 Off ch=1 n=53 v=0
+3000 Off ch=1 n=57 v=0
+3000 Off ch=1 n=60 v=0
+3120 On ch=1 n=50 v=80
+3120 On ch=1 n=53 v=80
+3120 On ch=1 n=57 v=80
+3120 On ch=1 n=60 v=80
+3240 Off ch=1 n=50 v=0
+3240 Off ch=1 n=53 v=0
+3240 Off ch=1 n=57 v=0
+3240 Off ch=1 n=60 v=0
+3480 On ch=1 n=50 v=80
+3480 On ch=1 n=53 v=80
+3480 On ch=1 n=57 v=80
+3480 On ch=1 n=60 v=80
+3840 Off ch=1 n=50 v=0
+3840 Off ch=1 n=53 v=0
+3840 Off ch=1 n=57 v=0
+3840 Off ch=1 n=60 v=0
+3840 Meta TrkEnd
+TrkEnd

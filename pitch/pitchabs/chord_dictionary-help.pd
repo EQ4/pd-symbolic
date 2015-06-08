@@ -1,0 +1,48 @@
+#N canvas 505 23 621 386 10;
+#X symbolatom 9 323 15 0 0 0 - - -;
+#X msg 9 199 72 67 64 64 48 60 55;
+#X msg 9 179 60 48 64 67 72 55;
+#X msg 9 149 72 64 67 70;
+#X msg 9 19 0 3 8;
+#X floatatom 102 294 5 0 0 0 - - -;
+#X obj 9 270 chord_dictionary;
+#X msg 9 59 1 5 8 11;
+#X floatatom 90 223 5 0 0 0 - - -;
+#X msg 9 39 0 5 9;
+#X msg 9 -1 0 3 7;
+#X msg 9 109 60 63 66;
+#X text 107 323 chord name;
+#X text 129 224 try transposing the whole chord;
+#X text 49 -2 works with pitch class sets;
+#X text 69 108 and with midi notes;
+#X msg 9 129 67 71 74 65;
+#X text 120 178 even with duplicate notes or pitch-classes;
+#X text 233 0 [chord_dictionary] tries to estimates chord names \,
+with their root \, type and inversion from incoming lists. These are
+expected to represent either midi notes or pc-sets. For it to work
+properly \, chord intervalic structure must be first declared on a
+separate textfile.;
+#X text 8 353 angel.faraldo@upf.edu --- Barcelona \, 2015;
+#X obj 9 246 list-apply + 0;
+#X text 233 80 TO DO: currently \, when the system does not recognise
+a chord \, it does not warn or output anything. This should be fixed
+soon.;
+#X msg 9 79 4 7 10 12;
+#X text 233 130 KNOWN ISSUE: with chords of 5 and more notes... the
+inversions do not work properly.;
+#X text 139 293 inversion (0 = root \, 1 = first inversion \, etc)
+;
+#X connect 1 0 20 0;
+#X connect 2 0 20 0;
+#X connect 3 0 20 0;
+#X connect 4 0 20 0;
+#X connect 6 0 0 0;
+#X connect 6 1 5 0;
+#X connect 7 0 20 0;
+#X connect 8 0 20 2;
+#X connect 9 0 20 0;
+#X connect 10 0 20 0;
+#X connect 11 0 20 0;
+#X connect 16 0 20 0;
+#X connect 20 0 6 0;
+#X connect 22 0 20 0;

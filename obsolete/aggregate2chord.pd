@@ -1,0 +1,53 @@
+#N canvas 619 46 703 802 10;
+#X obj 25 543 list-apply mod 12;
+#X obj 25 607 list2symbol;
+#X msg 88 586 symbol;
+#X obj 25 630 fromsymbol;
+#X obj 88 565 loadbang;
+#X obj 15 189 inlet;
+#X obj 25 652 outlet;
+#X text 25 675 angel.faraldo@upf.edu --- 2015;
+#X text 12 128 This reduction allows for quick querying of chord-types
+and their inversions.;
+#X obj 25 496 t l f;
+#X obj 25 522 list-math -;
+#X text 12 68 For example \, three numbers will represent all "major"
+chord inversions \, in root position (47 \, short for its intervalic
+representation 0 4 7) \, in first inversion (38) and second inversion
+(59).;
+#X obj 15 235 sort;
+#X text 12 8 This object receives a set of pitch integers in the form
+of a list \, for example midi note numbers and outputs an intervalic
+chordal scheme.;
+#X text 52 236 order them in low to high form...;
+#X obj 232 290 list-apply mod 12;
+#X obj 25 273 t l l;
+#X obj 248 325 PRINT;
+#X obj 100 482 PRINT;
+#X obj 301 711 list split;
+#X text 374 711 bass note;
+#X obj 554 681 list-compare;
+#X obj 266 378 list-unique;
+#X obj 275 429 PRINT;
+#X obj 254 674 PRINT;
+#X obj 232 355 list split 1;
+#X floatatom 178 402 5 0 0 0 - - -;
+#X obj 382 393 list fir;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 3 0 6 0;
+#X connect 4 0 2 0;
+#X connect 5 0 12 0;
+#X connect 9 0 10 0;
+#X connect 9 1 10 1;
+#X connect 10 0 0 0;
+#X connect 12 0 16 0;
+#X connect 15 0 17 0;
+#X connect 15 0 25 0;
+#X connect 16 0 9 0;
+#X connect 16 0 18 0;
+#X connect 16 1 15 0;
+#X connect 22 0 23 0;
+#X connect 25 0 26 0;
+#X connect 25 1 22 0;
