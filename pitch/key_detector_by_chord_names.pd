@@ -2,7 +2,7 @@
 #X declare -lib jasch_lib;
 #X declare -path ../absutils;
 #X obj 65 233 textfile;
-#X floatatom 191 72 5 0 0 0 - - -;
+#X floatatom 203 72 5 0 0 0 - - -;
 #X obj 18 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 8 327 unpack s s;
@@ -299,7 +299,7 @@
 #X obj 110 320 s \$0-end_file;
 #X obj 118 280 normalize;
 #X obj 279 2 path ../absutils;
-#X obj 8 48 listdir ../test/chordstxt/*.txt;
+#X obj 8 48 listdir ../files/txt_chords/*.txt;
 #X connect 0 0 7 0;
 #X connect 0 1 16 1;
 #X connect 0 1 31 0;

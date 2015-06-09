@@ -1,8 +1,8 @@
-#N canvas 79 23 492 489 10;
+#N canvas 700 23 492 489 10;
 #X declare -lib jasch_lib;
 #X declare -path ../absutils;
 #X declare -lib mrpeach;
-#X floatatom 168 79 5 0 0 0 - - -;
+#X floatatom 180 79 5 0 0 0 - - -;
 #X obj -11 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 18 333 mod 12;
@@ -224,7 +224,7 @@
 #X obj 279 12 path ../absutils;
 #X obj -21 242 midiquantizer;
 #X obj 54 290 normalize;
-#X obj -21 56 listdir ../test/chordsmidi/*.mid;
+#X obj -21 56 listdir ../files/midi_chords/*.mid;
 #X connect 1 0 29 0;
 #X connect 2 0 3 0;
 #X connect 3 0 9 0;

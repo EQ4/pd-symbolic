@@ -1,8 +1,7 @@
 #N canvas 669 23 576 322 10;
-#X declare -lib jasch;
+#X declare -lib jasch_lib;
 #X symbolatom 9 204 14 0 0 0 - - -;
-#X floatatom 102 204 5 0 0 0 - - -;
-#X obj 9 180 chord_dictionary;
+#X floatatom 126 204 5 0 0 0 - - -;
 #X text 8 286 angel.faraldo@upf.edu --- Barcelona \, 2015;
 #X symbolatom 9 253 15 0 0 0 - - -;
 #X text 107 253 chord name;
@@ -18,15 +17,15 @@
 #X text 87 118 9th;
 #X text 69 98 6th;
 #X text 69 78 7th;
-#X text 197 15 [vocabulary_reduction] simplifies the output of a [chord_dictionary]
+#X text 207 5 [vocabulary_reduction] simplifies the output of a [chord_dictionary]
 to fit different algorithms and purposes. The creation argument refers
 to the type of vocabulary reduction applied (temporarily only majmin
 is available):;
-#X text 198 91 - "majmin" - ouptuts only major and minor chords without
+#X text 208 81 - "majmin" - ouptuts only major and minor chords without
 inversions. augmented chords are mapped to major and diminished to
 minor. All other chords follow normal music theoretical reductions.
 ;
-#X text 198 161 - "majmininv" - same but with inversions.;
+#X text 208 151 - "majmininv" - same but with inversions.;
 #X obj 9 228 vocabulary_reduction majmin;
 #X msg 9 99 0 4 7 9;
 #X msg 9 -1 0 4 7;
@@ -34,16 +33,17 @@ minor. All other chords follow normal music theoretical reductions.
 #X text 68 159 add11;
 #X msg 9 139 0 3 7 10 14;
 #X msg 9 159 0 4 5 7;
-#X connect 0 0 21 0;
-#X connect 2 0 0 0;
-#X connect 2 1 1 0;
-#X connect 10 0 2 0;
-#X connect 11 0 2 0;
-#X connect 12 0 2 0;
-#X connect 13 0 2 0;
-#X connect 14 0 2 0;
-#X connect 21 0 4 0;
-#X connect 22 0 2 0;
-#X connect 23 0 2 0;
-#X connect 26 0 2 0;
-#X connect 27 0 2 0;
+#X obj 9 180 midi_chord_estimator;
+#X connect 0 0 20 0;
+#X connect 9 0 27 0;
+#X connect 10 0 27 0;
+#X connect 11 0 27 0;
+#X connect 12 0 27 0;
+#X connect 13 0 27 0;
+#X connect 20 0 3 0;
+#X connect 21 0 27 0;
+#X connect 22 0 27 0;
+#X connect 25 0 27 0;
+#X connect 26 0 27 0;
+#X connect 27 0 0 0;
+#X connect 27 1 1 0;
