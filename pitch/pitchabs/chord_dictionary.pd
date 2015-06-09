@@ -1,6 +1,6 @@
 #N canvas 423 23 402 710 10;
 #X obj 86 260 textfile;
-#N canvas 672 172 450 300 read_dictionary 1;
+#N canvas 672 172 450 300 read_dictionary 0;
 #X msg 49 142 rewind;
 #X obj 9 186 until;
 #X obj 32 78 t b b b b;
@@ -11,6 +11,8 @@
 #X obj 49 212 outlet;
 #X obj 42 35 r \$0-reload;
 #X msg 66 120 read ./chord_dictionary.txt;
+#X obj 129 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 7 0;
 #X connect 1 0 7 0;
 #X connect 2 0 1 0;
@@ -22,6 +24,7 @@
 #X connect 6 0 1 1;
 #X connect 8 0 4 0;
 #X connect 9 0 7 0;
+#X connect 10 0 4 0;
 #X restore 86 240 pd read_dictionary;
 #X obj 131 281 s \$0-end_of_textfile;
 #X obj 147 1 inlet;

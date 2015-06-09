@@ -1,0 +1,49 @@
+#N canvas 669 23 576 322 10;
+#X declare -lib jasch;
+#X symbolatom 9 204 14 0 0 0 - - -;
+#X floatatom 102 204 5 0 0 0 - - -;
+#X obj 9 180 chord_dictionary;
+#X text 8 286 angel.faraldo@upf.edu --- Barcelona \, 2015;
+#X symbolatom 9 253 15 0 0 0 - - -;
+#X text 107 253 chord name;
+#X text 54 -2 major;
+#X text 54 18 minor;
+#X text 54 38 aug;
+#X text 55 58 dim;
+#X msg 9 59 0 3 6;
+#X msg 9 19 0 3 7;
+#X msg 9 39 0 4 8;
+#X msg 9 79 0 4 7 10;
+#X msg 9 119 0 4 7 10 14;
+#X text 87 118 9th;
+#X text 69 98 6th;
+#X text 69 78 7th;
+#X text 197 15 [vocabulary_reduction] simplifies the output of a [chord_dictionary]
+to fit different algorithms and purposes. The creation argument refers
+to the type of vocabulary reduction applied (temporarily only majmin
+is available):;
+#X text 198 91 - "majmin" - ouptuts only major and minor chords without
+inversions. augmented chords are mapped to major and diminished to
+minor. All other chords follow normal music theoretical reductions.
+;
+#X text 198 161 - "majmininv" - same but with inversions.;
+#X obj 9 228 vocabulary_reduction majmin;
+#X msg 9 99 0 4 7 9;
+#X msg 9 -1 0 4 7;
+#X text 89 138 min9;
+#X text 68 159 add11;
+#X msg 9 139 0 3 7 10 14;
+#X msg 9 159 0 4 5 7;
+#X connect 0 0 21 0;
+#X connect 2 0 0 0;
+#X connect 2 1 1 0;
+#X connect 10 0 2 0;
+#X connect 11 0 2 0;
+#X connect 12 0 2 0;
+#X connect 13 0 2 0;
+#X connect 14 0 2 0;
+#X connect 21 0 4 0;
+#X connect 22 0 2 0;
+#X connect 23 0 2 0;
+#X connect 26 0 2 0;
+#X connect 27 0 2 0;
