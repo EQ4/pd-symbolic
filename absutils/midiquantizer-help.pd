@@ -1,62 +1,67 @@
-#N canvas 659 23 513 570 10;
-#X obj -150 57 openpanel;
-#X obj -150 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#N canvas 551 23 680 683 10;
+#X declare -lib mrpeach;
+#X obj -150 197 openpanel;
+#X obj -150 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg -150 80 read \$1;
-#X obj -150 507 noteout;
-#X msg -20 90 loop \$1;
-#X obj -20 69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X msg -150 220 read \$1;
+#X obj -150 567 noteout;
+#X msg -20 230 loop \$1;
+#X obj -20 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj -80 69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj -80 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X msg -80 90 play \$1;
-#X msg -18 121 flush;
-#X msg -18 151 panic;
-#X floatatom 6 270 5 0 0 0 - - -;
-#X floatatom -29 301 5 0 0 0 - - -;
-#X text 22 121 outputs all midi notes in no-time;
-#X text 22 151 all notes off;
-#X text -150 529 angel.faraldo@upf.edu --- 2015;
-#X obj -105 464 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X msg -80 230 play \$1;
+#X msg -18 271 flush;
+#X msg -18 301 panic;
+#X floatatom -6 395 5 0 0 0 - - -;
+#X floatatom -41 416 5 0 0 0 - - -;
+#X text 22 271 outputs all midi notes in no-time;
+#X text 22 301 all notes off;
+#X text -150 589 angel.faraldo@upf.edu --- 2015;
+#X obj -105 524 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
-#X text -84 462 send notes to synthesizer;
-#X obj -131 406 spigot 0;
-#X obj -76 377 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X text -84 522 send notes to synthesizer;
+#X text 33 394 tempo (bpm);
+#X text -4 417 length (in midi "ticks");
+#X obj -75 369 unpack 0 0 0;
+#X floatatom -75 437 5 0 0 0 - - -;
+#X obj -150 546 spigot 1;
+#X text -38 438 length (in quarter notes);
+#X text 8 369 third outlet outputs extra info about midi track....
+;
+#X obj -150 326 midiquantizer;
+#X text -150 6 [midi_quantizer] is a midi player with quantifier based
+on mrpeach/midifile. It will force the content to adjust to full beats
+(quarter notes) and it will quantize the content to semiquavers;
+#X msg 39 229 quantize \$1;
+#X obj 39 211 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj -131 427 print midi_content;
-#X text 45 269 tempo (bpm);
-#X text 8 302 length (in midi "ticks");
-#X obj -63 244 unpack 0 0 0;
-#X floatatom -63 332 5 0 0 0 - - -;
-#X obj -150 486 spigot 1;
-#X text -26 333 length (in quarter notes);
-#X obj -131 375 prepend;
-#X text -55 375 print midi notes + ticks in the console;
-#X text -48 216 second outlet outputs quantised time information;
-#X text -48 196 first outlet outputs midi note info;
-#X text 22 244 third outlet outputs extra info about midi track....
+#X text 120 229 default = 1;
+#X text -60 327 first outlet outputs midi notes (note+velocity);
+#X text -149 74 converts note-off messages to note-on messges with
+velocity zero!;
+#X text -149 104 for the moment it filters out all non-note informations
 ;
-#X text -149 10 midi player with quantifier based on mrpeach/midifile
-;
-#X obj -150 186 midiquantizer;
+#X obj -113 477 print midi_raw;
+#X text -148 127 outputs messages in pd midi style;
+#X text -20 477 2nd outlet outputs "raw" midi info: tick \, note \,
+vel \, channel;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
-#X connect 2 0 32 0;
-#X connect 4 0 32 0;
+#X connect 2 0 24 0;
+#X connect 4 0 24 0;
 #X connect 5 0 4 0;
 #X connect 6 0 7 0;
-#X connect 7 0 32 0;
-#X connect 8 0 32 0;
-#X connect 9 0 32 0;
-#X connect 15 0 24 1;
-#X connect 17 0 19 0;
-#X connect 18 0 17 1;
-#X connect 22 0 23 0;
-#X connect 22 1 11 0;
-#X connect 22 2 10 0;
-#X connect 24 0 3 0;
-#X connect 26 0 17 0;
-#X connect 32 0 24 0;
-#X connect 32 0 26 0;
-#X connect 32 1 26 1;
-#X connect 32 2 22 0;
+#X connect 7 0 24 0;
+#X connect 8 0 24 0;
+#X connect 9 0 24 0;
+#X connect 15 0 21 1;
+#X connect 19 0 20 0;
+#X connect 19 1 11 0;
+#X connect 19 2 10 0;
+#X connect 21 0 3 0;
+#X connect 24 0 21 0;
+#X connect 24 1 32 0;
+#X connect 24 2 19 0;
+#X connect 26 0 24 0;
+#X connect 27 0 26 0;
