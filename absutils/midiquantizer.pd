@@ -1,4 +1,4 @@
-#N canvas 227 23 883 630 10;
+#N canvas 225 82 883 630 10;
 #X obj 251 270 /;
 #X obj 251 291 / 1000;
 #X obj 364 289 s \$0-ticks;
@@ -66,7 +66,7 @@
 #X obj -70 138 t b s;
 #X obj -43 163 symbol;
 #X obj -164 93 t b b;
-#X obj -307 41 sel 1;
+#X obj -307 61 sel 1;
 #X obj 137 358 mod;
 #X obj 160 335 r \$0-ticks;
 #X obj 138 312 s \$0-real_end;
@@ -94,7 +94,7 @@
 #X obj -43 57 s \$0-quant;
 #X obj 14 436 r \$0-quant;
 #X obj -106 569 prepend;
-#X msg -307 62 0;
+#X msg -307 82 0;
 #X obj 118 475 + 1;
 #X msg -220 136 0;
 #X obj -164 384 mrpeach/midifile;
