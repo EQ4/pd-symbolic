@@ -1,0 +1,52 @@
+#N canvas 740 116 385 409 10;
+#X declare -path pitchabs -path ../absutils;
+#X declare -lib jasch_lib;
+#X symbolatom -86 264 10 0 0 0 - - -;
+#X obj -121 53 openpanel;
+#X obj -121 32 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -121 76 read \$1;
+#X obj -121 374 noteout;
+#X msg 54 53 loop \$1;
+#X obj 54 32 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj -6 32 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg -6 53 play \$1;
+#X msg -54 53 flush;
+#X obj -121 2 path pitchabs ../absutils;
+#X floatatom 21 265 5 0 0 0 - - -;
+#X obj -96 242 midi_chord_estimator;
+#X obj -121 141 midiquantizer;
+#X msg 114 53 quantize \$1;
+#X obj 114 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj -46 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text -25 163 done;
+#X obj -82 213 print make_chords;
+#X obj -96 188 make_chord;
+#X text 30 211 groups chords in separate lists;
+#X obj -96 321 vocabulary_reduction majmin;
+#X obj -86 289 print complete_spelling;
+#X obj -96 347 print reduced;
+#X connect 0 0 22 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 13 0;
+#X connect 5 0 13 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 13 0;
+#X connect 9 0 13 0;
+#X connect 12 0 0 0;
+#X connect 12 0 21 0;
+#X connect 12 1 11 0;
+#X connect 13 0 4 0;
+#X connect 13 1 19 0;
+#X connect 13 3 16 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 19 0 12 0;
+#X connect 19 0 18 0;
+#X connect 21 0 23 0;
