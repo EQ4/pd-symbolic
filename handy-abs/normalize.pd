@@ -1,4 +1,4 @@
-#N canvas 816 205 450 300 10;
+#N canvas 813 207 450 300 10;
 #X obj 156 106 inlet;
 #X text 142 88 entra una lista;
 #X obj 156 130 t a a;

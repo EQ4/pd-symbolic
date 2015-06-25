@@ -1,0 +1,21 @@
+#N canvas 1124 68 400 372 10;
+#X text 6 47 aquí tendremos que escribir código para crear un histograma
+por cada pitch-class (12) \, usando variables dolar (\$1) en el argumento
+y los objetos... de ese modo nos ahorramos una gran cantidad de trabajo
+manual...;
+#X text 17 138 por ejemplo \, el objeto [route \$1] sólo dejará pasar
+aquellas listas cuyo primer elemento coincida con el valor asignado
+a la variable en el argumento de creación.;
+#X obj 163 229 route \$1;
+#X obj 70 314 + 0.1;
+#X obj 163 256 t f f;
+#X obj 163 205 r fill-\$2;
+#X obj 12 17 table transition-\$1-\$2 12;
+#X obj 70 291 tabread transition-\$1-\$2;
+#X obj 70 336 tabwrite transition-\$1-\$2;
+#X connect 2 0 4 0;
+#X connect 3 0 8 0;
+#X connect 4 0 7 0;
+#X connect 4 1 8 1;
+#X connect 5 0 2 0;
+#X connect 7 0 3 0;

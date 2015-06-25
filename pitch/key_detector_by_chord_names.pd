@@ -1,6 +1,6 @@
-#N canvas 776 81 463 663 10;
+#N canvas 661 106 463 663 10;
 #X declare -lib jasch_lib;
-#X declare -path ../absutils;
+#X declare -path ../handy-abs;
 #X obj 65 275 textfile;
 #X floatatom 223 114 5 0 0 0 - - -;
 #X obj 38 67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -298,7 +298,6 @@
 #X obj 118 342 tabset \$0-profile;
 #X obj 110 362 s \$0-end_file;
 #X obj 118 322 normalize;
-#X obj 319 4 path ../absutils;
 #X obj 28 90 listdir ../files/txt_chords/*.txt;
 #X obj 8 23 openpanel;
 #X obj 8 4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1 -1
@@ -307,11 +306,12 @@
 #X text 82 44 or get all content of a folder;
 #X text 59 66 and retrieve files individually;
 #X text 8 632 angel.faraldo@upf.edu --- Barcelona \, 2015;
+#X obj 319 4 path ../handy-abs;
 #X connect 0 0 7 0;
 #X connect 0 1 16 1;
 #X connect 0 1 31 0;
 #X connect 0 1 33 0;
-#X connect 2 0 36 0;
+#X connect 2 0 35 0;
 #X connect 3 0 6 0;
 #X connect 3 1 5 0;
 #X connect 4 0 3 0;
@@ -335,13 +335,13 @@
 #X connect 19 0 17 0;
 #X connect 19 1 28 0;
 #X connect 21 0 25 0;
-#X connect 23 0 36 0;
+#X connect 23 0 35 0;
 #X connect 26 0 21 0;
 #X connect 28 0 27 0;
 #X connect 31 0 34 0;
 #X connect 34 0 32 0;
+#X connect 35 0 19 0;
+#X connect 35 0 29 0;
+#X connect 35 1 1 0;
 #X connect 36 0 19 0;
-#X connect 36 0 29 0;
-#X connect 36 1 1 0;
-#X connect 37 0 19 0;
-#X connect 38 0 37 0;
+#X connect 37 0 36 0;
