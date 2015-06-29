@@ -1,0 +1,4 @@
+Histogram
+
+
+[(10, 'Am'), (2, 'Bb'), (22, 'C'), (7, 'Dm'), (3, 'Em'), (15, 'F'), (4, 'Fm'), (17, 'G'), (1, 'bruno_mars/when_i_was_your_man_crd_1198871id_04122012date')]

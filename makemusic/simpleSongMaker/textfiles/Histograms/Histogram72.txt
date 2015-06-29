@@ -1,0 +1,4 @@
+Histogram
+
+
+[(19, 'Am'), (11, 'C'), (4, 'E'), (4, 'Em'), (18, 'F'), (20, 'G'), (1, 'adele/rolling_in_the_deep_crd')]

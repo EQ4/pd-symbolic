@@ -1,0 +1,4 @@
+Histogram
+
+
+[(2, 'Am'), (1, 'Bb'), (8, 'C'), (3, 'Dm'), (5, 'F'), (4, 'G'), (1, 'beatles/let_it_be_crd')]

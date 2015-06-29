@@ -1,0 +1,4 @@
+Histogram
+
+
+[(43, 'Am'), (19, 'C'), (27, 'Dm'), (2, 'Em'), (18, 'F'), (4, 'G'), (1, 'rihanna/stay_crd')]

@@ -1,0 +1,4 @@
+Histogram
+
+
+[(15, 'C'), (15, 'D'), (17, 'Em'), (12, 'G'), (1, 'magic/rude_crd')]

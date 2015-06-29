@@ -1,0 +1,4 @@
+Histogram
+
+
+[(17, 'Am'), (26, 'C'), (4, 'Dm'), (4, 'Em'), (23, 'F'), (17, 'G'), (1, 'rihanna/four_five_seconds_ver2_crd')]

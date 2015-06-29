@@ -1,0 +1,4 @@
+Histogram
+
+
+[(16, 'Am7'), (24, 'C'), (22, 'Em'), (15, 'F'), (24, 'G'), (1, 'coldplay/fix_you_acoustic_crd')]

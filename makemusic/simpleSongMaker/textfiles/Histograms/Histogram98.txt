@@ -1,0 +1,4 @@
+Histogram
+
+
+[(23, 'Am'), (13, 'C'), (3, 'Cm'), (5, 'D'), (22, 'Em'), (2, 'F'), (2, 'F#'), (20, 'G'), (1, 'hozier/take_me_to_church_ver2_crd')]

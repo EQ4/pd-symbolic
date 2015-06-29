@@ -1,0 +1,4 @@
+Histogram
+
+
+[(24, 'Am'), (44, 'C'), (13, 'Dm'), (37, 'F'), (2, 'G'), (1, 'ed_sheeran/give_me_love_ver6_crd')]

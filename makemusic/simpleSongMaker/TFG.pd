@@ -1,0 +1,61 @@
+#N canvas 115 23 1280 717 10;
+#X obj -20 -18 cnv 15 3000 3000 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 63 39 cnv 15 150 300 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 102 92 vradio 15 1 0 12 select_key empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 91 91 C;
+#X text 87 107 Db;
+#X text 91 121 D;
+#X text 87 137 Eb;
+#X text 91 151 E;
+#X text 90 197 G;
+#X text 87 211 Ab;
+#X text 90 227 A;
+#X text 86 241 Bb;
+#X text 91 257 B;
+#X text 90 167 F;
+#X text 87 181 Gb;
+#X text 98 43 SONG GENERATOR;
+#X obj 168 95 vradio 15 1 0 2 select_Mn empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 133 95 major;
+#X text 133 108 minor;
+#X obj 155 205 tgl 30 0 select_start empty empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 155 187 r para;
+#X text 65 277 1 Select song's key;
+#X text 65 296 2 Press the botton and;
+#X text 77 309 wait until disappear.;
+#X obj 273 39 cnv 15 150 300 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 332 111 bng 30 250 50 0 write_song2 empty 1 9 13 0 20 -262144
+-1 -1;
+#X obj 332 151 bng 30 250 50 0 write_song empty 2 9 13 0 20 -262144
+-1 -1;
+#X obj 332 191 bng 30 250 50 0 write_song3 empty 3 9 13 0 20 -262144
+-1 -1;
+#X text 275 279 1 Press the following;
+#X text 293 291 sequence.;
+#X obj 483 39 cnv 15 150 300 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 315 43 WRITE SONG;
+#X text 525 43 PLAY SONG;
+#X obj 488 170 vradio 15 1 0 11 select_octaves empty empty 0 -8 0 10
+-262144 -1 -1 0;
+#X text 503 168 +0;
+#X text 503 183 +12;
+#X text 503 212 +24;
+#X text 503 197 +36;
+#X text 503 228 +48;
+#X text 503 243 +60;
+#X text 503 258 +72;
+#X text 503 273 +84;
+#X text 503 288 +96;
+#X text 503 302 +108;
+#X text 503 318 +120;
+#X text 486 150 OCTAVES:;
+#X obj 533 67 tgl 40 0 select_play empty empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X connect 20 0 19 0;

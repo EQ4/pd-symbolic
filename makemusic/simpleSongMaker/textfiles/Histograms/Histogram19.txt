@@ -1,0 +1,4 @@
+Histogram
+
+
+[(3, 'A'), (3, 'Bm'), (5, 'D'), (3, 'E'), (5, 'Em'), (6, 'F#'), (5, 'G'), (1, 'eagles/hotel_california_crd')]

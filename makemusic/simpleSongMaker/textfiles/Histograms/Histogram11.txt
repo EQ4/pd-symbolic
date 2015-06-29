@@ -1,0 +1,4 @@
+Histogram
+
+
+[(7, 'Am'), (33, 'Am7'), (44, 'C'), (8, 'Dm'), (42, 'F'), (56, 'G'), (1, 'ed_sheeran/thinking_out_loud_ver2_crd')]

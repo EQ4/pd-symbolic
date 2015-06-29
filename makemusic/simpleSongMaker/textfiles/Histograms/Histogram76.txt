@@ -1,0 +1,4 @@
+Histogram
+
+
+[(8, 'Bm'), (16, 'D'), (8, 'G'), (1, 'bruno_mars/just_the_way_you_are_ver2_crd_970416id_23072010date')]

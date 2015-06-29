@@ -1,0 +1,4 @@
+Histogram
+
+
+[(3, 'Am'), (23, 'C'), (23, 'D'), (21, 'G'), (1, 'james_bay/let_it_go_ver2_crd')]

@@ -1,0 +1,4 @@
+Histogram
+
+
+[(3, 'A'), (5, 'Am'), (1, 'Bm'), (12, 'C'), (1, 'Cm'), (12, 'D'), (7, 'Em'), (6, 'G'), (1, 'idina_menzel/let_it_go_crd')]

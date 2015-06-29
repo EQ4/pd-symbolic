@@ -1,0 +1,22 @@
+#N canvas 545 23 417 348 10;
+#X floatatom 13 271 5 0 0 0 - - -;
+#X text 8 105 ARGUMENTS:;
+#X text 8 125 1) name of the object (abstraction) to be created.;
+#X text 7 203 In this example \, the object creates 10 instances of
+the object [instance] in a subwindow (right-click open \, to see how
+this works). The instances are placed in the pd-instances subpatch.
+;
+#X text 50 271 <-- change dynamically the number of instances called
+;
+#X text 7 7 [multiplistancer] creates n instances of the same object
+and assigns them an index[0...n-1] via the first argument \, so they
+can be addressed individually and non-locally from another patch. This
+is useful to create massive collections of abstractions ('voices')
+without having to write them one-by-one.;
+#X obj 13 296 multiplinstancer instance 12 major;
+#X text 253 326 angel faraldo 2011-2015;
+#X text 8 145 2) number of instances (can be changed dynamically via
+the inlet \, but beware you will have to wait a bit...;
+#X text 8 175 3) additional argument \, equal for all instances (symbol)
+;
+#X connect 0 0 6 0;

@@ -1,0 +1,4 @@
+Histogram
+
+
+[(26, 'A'), (2, 'Bm'), (35, 'D'), (25, 'E'), (1, 'adele/someone_like_you_crd')]

@@ -1,0 +1,4 @@
+Histogram
+
+
+[(8, 'Am7'), (1, 'Bm'), (10, 'C'), (1, 'Cm'), (4, 'D'), (3, 'Em'), (12, 'G'), (1, 'extreme/more_than_words_crd')]

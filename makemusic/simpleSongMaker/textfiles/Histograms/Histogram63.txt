@@ -1,0 +1,4 @@
+Histogram
+
+
+[(9, 'A'), (2, 'B'), (9, 'C'), (16, 'D'), (19, 'Em'), (18, 'G'), (1, 'green_day/boulevard_of_broken_dreams_acoustic_crd')]

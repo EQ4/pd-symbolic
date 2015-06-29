@@ -1,0 +1,4 @@
+Histogram
+
+
+[(17, 'A'), (16, 'Bm'), (17, 'D'), (16, 'G'), (1, 'ed_sheeran/photograph_crd')]

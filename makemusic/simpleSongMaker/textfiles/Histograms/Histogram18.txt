@@ -1,0 +1,4 @@
+Histogram
+
+
+[(1, 'A'), (8, 'Am'), (1, 'B'), (12, 'C'), (11, 'D'), (2, 'E'), (26, 'Em'), (42, 'G'), (1, 'ed_sheeran/the_a_team_ver10_crd')]

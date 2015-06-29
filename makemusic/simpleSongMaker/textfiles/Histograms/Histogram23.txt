@@ -1,0 +1,4 @@
+Histogram
+
+
+[(3, 'A'), (1, 'Bb'), (1, 'C'), (30, 'D'), (1, 'F'), (39, 'G'), (1, 'coldplay/the_scientist_acoustic_crd')]
