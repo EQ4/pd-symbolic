@@ -1,6 +1,7 @@
-#N canvas 628 76 432 91 10;
+#N canvas 543 62 620 229 10;
 #X declare -path ../handy-abs -path ../pitch-abs;
 #X declare -lib mrpeach;
+#N canvas 96 23 450 300 guts 0;
 #N canvas 610 140 1069 812 sequence 0;
 #X obj 106 -26 + 1;
 #X obj 77 -27 f 0;
@@ -198,7 +199,7 @@
 #N canvas 1292 78 518 242 number_of_notes 0;
 #X obj 7 -1450 cnv 15 350 230 empty empty empty 20 12 0 14 -261682
 -66577 0;
-#N canvas 0 0 450 300 (subpatch) 0;
+#N canvas 0 22 450 300 (subpatch) 0;
 #X array NumberOfNotes 117 float 0;
 #X coords 0 1 116 -1 300 190 1 0 0;
 #X restore 33 -1427 graph;
@@ -368,7 +369,7 @@
 #X connect 47 0 28 0;
 #X restore 10 -1196 pd midiextract;
 #X obj 49 -1116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 10 -1092 prepend;
 #X obj 10 -1068 route 0 1;
 #X obj 49 -1138 r mode_number;
@@ -539,3 +540,44 @@ la octava principal de Do a Do (36-48).;
 #X connect 13 0 7 0;
 #X connect 13 0 9 0;
 #X restore -209 -1860 pd pitch-map;
+#X restore 65 -1475 pd guts;
+#X obj -485 -1520 cnv 15 100 60 empty pattern 0 20 12 0 14 -233017
+-66577 0;
+#X obj -485 -1640 hradio 50 1 0 12 key_root set-key_root empty 0 -8
+0 10 -262144 -261234 -1 0;
+#X text -463 -1623 C;
+#X text -415 -1623 Db;
+#X text -363 -1623 D;
+#X text -317 -1623 Eb;
+#X text -167 -1623 Gb;
+#X text -117 -1623 G;
+#X text -67 -1623 Ab;
+#X text -14 -1623 A;
+#X text -263 -1623 E;
+#X text 36 -1623 Bb;
+#X text 86 -1623 B;
+#X obj 65 -1580 vradio 50 1 0 2 key_mode set-key_mode empty 0 -8 0
+10 -262144 -261234 -1 1;
+#X obj -15 -1580 tgl 50 0 start set-start empty 17 7 0 10 -262144 -261234
+-1 0 1;
+#X text -5 -1545 start;
+#X text -213 -1623 F;
+#X obj -485 -1580 hradio 50 1 0 4 bars set-bars empty 0 -8 0 10 -262144
+-261234 -1 0;
+#X text 80 -1564 maj;
+#X text 80 -1514 min;
+#X obj -95 -1580 tgl 50 0 make_new reset_seq empty 17 7 0 10 -262144
+-261234 -1 0 1;
+#X obj -252 -1580 hsl 129 50 -1 1 0 0 register set-register empty -2
+-8 0 10 -262144 -261234 -1 6400 1;
+#X text -235 -1562 low;
+#X text -464 -1563 1;
+#X text -414 -1563 2;
+#X text -364 -1563 4;
+#X text -314 -1563 8;
+#X text -165 -1562 high;
+#X text -78 -1546 new;
+#X obj -15 -1520 cnv 15 50 60 empty empty bass 0 15 0 22 -261234 -66577
+0;
+#X obj -15 -1490 cnv 15 50 20 empty empty house 0 12 0 17 -261234 -66577
+0;
