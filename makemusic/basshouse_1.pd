@@ -1,6 +1,47 @@
-#N canvas 507 24 612 161 10;
+#N canvas 548 23 618 158 10;
 #X declare -path ../handy-abs -path ../pitch-abs;
-#N canvas 193 337 787 719 guts 0;
+#X obj -491 -750 hradio 50 1 0 12 key_root set-key_root empty 0 -8
+0 10 -262144 -261234 -1 0;
+#X text -469 -733 C;
+#X text -421 -733 Db;
+#X text -369 -733 D;
+#X text -323 -733 Eb;
+#X text -173 -733 Gb;
+#X text -123 -733 G;
+#X text -73 -733 Ab;
+#X text -20 -733 A;
+#X text -269 -733 E;
+#X text 30 -733 Bb;
+#X text 80 -733 B;
+#X obj -101 -690 tgl 50 0 start set-start empty 17 7 0 10 -262144 -261234
+-1 1 1;
+#X text -91 -655 start;
+#X text -219 -733 F;
+#X obj -491 -690 hradio 50 1 0 4 bars set-bars empty 0 -8 0 10 -262144
+-261234 -1 0;
+#X obj -153 -690 tgl 50 0 make_new reset_seq empty 17 7 0 10 -262144
+-261234 -1 0 1;
+#X obj -286 -690 hsl 129 50 -1 1 0 0 register set-register empty -2
+-8 0 10 -262144 -261234 -1 2400 1;
+#X text -270 -672 low;
+#X text -470 -673 1;
+#X text -420 -673 2;
+#X text -370 -673 4;
+#X text -320 -673 8;
+#X text -199 -672 high;
+#X text -137 -655 new;
+#X obj -47 -690 cnv 15 50 50 empty empty bass 0 15 0 22 -261234 -66577
+0;
+#X obj -47 -664 cnv 15 50 20 empty empty house 0 12 0 17 -261234 -66577
+0;
+#X obj 9 -690 hradio 50 1 0 2 key_mode set-key_mode empty 0 -8 0 10
+-262144 -261234 -1 1;
+#X text 74 -674 min;
+#X text 24 -674 maj;
+#X text -488 -634 THIS PATCH GENERATES MIDI OUTPUT!;
+#X text -284 -634 YOU HAVE TO CONNECT IT TO A MIDI SYNTH TO LISTEN
+;
+#N canvas 91 23 787 719 gutssssssssss 0;
 #X obj -101 -471 list-wrandom;
 #X obj -74 -109 + 0;
 #X msg -74 -68 \$1 120;
@@ -13,16 +54,16 @@
 #X obj -101 -450 t f f;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array tabla 25 float 1;
-#A 0 1 1 1 1 1 1 1 0.999999 0.999987 0.999842 0.998073 0.977023 0.7773
-0.2227 0.0229774 0.00192673 0.000158436 1.30071e-05 1.0677e-06 8.76425e-08
-7.19414e-09 5.90531e-10 4.84737e-11 3.97897e-12 3.26613e-13;
+#A 0 1 1 1 1 0.999998 0.999992 0.999961 0.999815 0.999117 0.995801
+0.980281 0.912436 0.685949 0.314051 0.0875638 0.0197191 0.0041988 0.000883046
+0.000185226 3.88311e-05 8.1397e-06 1.70618e-06 3.57636e-07 7.49646e-08
+1.57134e-08;
 #X coords 0 1 24 0 200 140 1 0 0;
 #X restore 57 -384 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array result 25 float 1;
-#A 0 0.0205437 0.0102718 0.0410873 0.0256796 0.00513591 0.0256796 0
-0.600902 0 0.0564861 0.138402 0.0150537 0.0598822 0 0.000826069 4.94777e-05
-0 2.67214e-07 0 4.05112e-09 0 0 4.97914e-13 0 1.67746e-15;
+#A 0 0.0384949 0 0 0 0 0.0898208 0 0.372048 0 0.0255555 0.45283 0 0.0176037
+0 0.00337076 0.000253029 0 2.26619e-05 0 4.98267e-07 0 0 0 0 0;
 #X coords 0 1 24 0 200 140 1 0 0;
 #X restore 56 -384 graph;
 #X obj 127 -418 tabset result;
@@ -33797,7 +33838,7 @@ or less common according to our library.;
 0.0911255 0.090332 0.0871277 0.0859375 0.0857239 0.0812988 0.0783997
 0.0784302 0.0783691 0.074585 0.0680237 0.0690918 0.0716248 0.0666199
 0.0639648 0.0647278 0.059845 0.0545959 0.0566406 0.0586853 0.0544739
-0.0498657 0.0481873 0.0455017 0.0441589;
+0.0498657 0.0481873 0.0455017 0.0441589 ;
 #A 216000 0.0456543 0.0438843 0.0397034 0.035675 0.0307312 0.0315857
 0.0366821 0.0327454 0.0250854 0.0232544 0.0187378 0.0173645 0.0233154
 0.0196228 0.0109558 0.0113525 0.010498 0.000274658 0.00131226 0.00949097
@@ -52345,10 +52386,8 @@ or less common according to our library.;
 #X obj -488 -574 r new_seq;
 #X obj -488 -504 sel 1;
 #X obj -481 -481 s reset_seq;
-#X obj -488 -187 s make_seq;
+#X obj -488 -228 s make_seq;
 #X obj -488 -436 t b l l;
-#X obj -469 -211 s pattern;
-#X msg -469 -233 label \$1;
 #X obj -434 -386 r bars;
 #X obj -59 -129 r key_root;
 #X obj 127 -514 r register;
@@ -52367,7 +52406,7 @@ or less common according to our library.;
 #X obj -294 -182 sel 15;
 #X text 80 -133 angel.faraldo@upf.edu \, 2015;
 #X msg -310 -544 \; set-key_root 0 \; set-key_mode 1 \; set-bars 0
-\; set-register 0 \; pattern fontSize 22 \; pd dsp 1;
+\; set-register 0 \; pd dsp 1;
 #X connect 0 0 9 0;
 #X connect 1 0 13 0;
 #X connect 2 0 16 0;
@@ -52394,14 +52433,13 @@ or less common according to our library.;
 #X connect 29 0 23 0;
 #X connect 29 1 21 0;
 #X connect 31 0 83 0;
-#X connect 32 0 85 0;
 #X connect 35 0 39 0;
 #X connect 36 0 37 0;
 #X connect 36 0 38 0;
-#X connect 36 0 96 0;
+#X connect 36 0 94 0;
 #X connect 37 0 36 1;
 #X connect 38 0 35 0;
-#X connect 38 0 99 0;
+#X connect 38 0 97 0;
 #X connect 39 0 40 0;
 #X connect 41 0 7 0;
 #X connect 42 0 14 1;
@@ -52450,62 +52488,22 @@ or less common according to our library.;
 #X connect 83 1 32 0;
 #X connect 83 1 33 0;
 #X connect 83 2 43 0;
-#X connect 85 0 84 0;
-#X connect 86 0 95 0;
-#X connect 87 0 1 1;
-#X connect 88 0 14 0;
-#X connect 89 0 90 0;
-#X connect 90 0 3 0;
-#X connect 90 1 5 0;
-#X connect 91 0 72 0;
-#X connect 92 0 103 0;
-#X connect 93 0 77 1;
-#X connect 94 0 44 1;
-#X connect 94 0 97 0;
-#X connect 95 0 94 0;
-#X connect 96 0 101 0;
-#X connect 97 0 96 1;
-#X connect 97 0 100 0;
-#X connect 99 0 98 0;
-#X connect 100 0 101 1;
-#X connect 101 0 78 0;
-#X restore 63 -632 pd guts;
-#X obj -491 -750 hradio 50 1 0 12 key_root set-key_root empty 0 -8
-0 10 -262144 -261234 -1 2;
-#X text -469 -733 C;
-#X text -421 -733 Db;
-#X text -369 -733 D;
-#X text -323 -733 Eb;
-#X text -173 -733 Gb;
-#X text -123 -733 G;
-#X text -73 -733 Ab;
-#X text -20 -733 A;
-#X text -269 -733 E;
-#X text 30 -733 Bb;
-#X text 80 -733 B;
-#X obj -101 -690 tgl 50 0 start set-start empty 17 7 0 10 -262144 -261234
--1 1 1;
-#X text -91 -655 start;
-#X text -219 -733 F;
-#X obj -491 -690 hradio 50 1 0 4 bars set-bars empty 0 -8 0 10 -262144
--261234 -1 0;
-#X obj -153 -690 tgl 50 0 make_new reset_seq empty 17 7 0 10 -262144
--261234 -1 0 1;
-#X obj -286 -690 hsl 129 50 -1 1 0 0 register set-register empty -2
--8 0 10 -262144 -261234 -1 0 1;
-#X text -270 -672 low;
-#X text -470 -673 1;
-#X text -420 -673 2;
-#X text -370 -673 4;
-#X text -320 -673 8;
-#X text -199 -672 high;
-#X text -137 -655 new;
-#X obj -47 -690 cnv 15 50 50 empty empty bass 0 15 0 22 -261234 -66577
-0;
-#X obj -47 -664 cnv 15 50 20 empty empty house 0 12 0 17 -261234 -66577
-0;
-#X obj 9 -690 hradio 50 1 0 2 key_mode set-key_mode empty 0 -8 0 10
--262144 -261234 -1 1;
-#X text 74 -674 min;
-#X text 24 -674 maj;
-#X text -193 -632 angel.faraldo@upf.edu --- Barcelona \, 2015;
+#X connect 84 0 93 0;
+#X connect 85 0 1 1;
+#X connect 86 0 14 0;
+#X connect 87 0 88 0;
+#X connect 88 0 3 0;
+#X connect 88 1 5 0;
+#X connect 89 0 72 0;
+#X connect 90 0 101 0;
+#X connect 91 0 77 1;
+#X connect 92 0 44 1;
+#X connect 92 0 95 0;
+#X connect 93 0 92 0;
+#X connect 94 0 99 0;
+#X connect 95 0 94 1;
+#X connect 95 0 98 0;
+#X connect 97 0 96 0;
+#X connect 98 0 99 1;
+#X connect 99 0 78 0;
+#X restore 10 -634 pd gutssssssssss;

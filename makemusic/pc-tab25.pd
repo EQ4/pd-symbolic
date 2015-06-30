@@ -1,4 +1,4 @@
-#N canvas 290 585 220 224 10;
+#N canvas 72 43 220 224 10;
 #X obj -32 41 route \$1;
 #X obj -32 64 t f f;
 #X obj -116 116 + 0.1;
