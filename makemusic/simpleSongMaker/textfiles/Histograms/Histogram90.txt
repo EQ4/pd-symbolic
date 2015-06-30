@@ -1,4 +1,0 @@
-Histogram
-
-
-[(1, 'eric_clapton/tears_in_heaven_tab')]

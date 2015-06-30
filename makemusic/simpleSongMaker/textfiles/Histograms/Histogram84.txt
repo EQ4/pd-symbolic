@@ -1,4 +1,0 @@
-Histogram
-
-
-[(3, 'A'), (18, 'D'), (31, 'G'), (1, 'echosmith/bright_ver2_crd')]

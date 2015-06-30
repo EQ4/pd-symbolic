@@ -1,4 +1,0 @@
-Histogram
-
-
-[(14, 'Bm'), (19, 'D'), (4, 'G'), (1, 'a_great_big_world/say_something_ver2_crd')]
