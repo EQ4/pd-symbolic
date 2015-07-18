@@ -1,11 +1,11 @@
-#N canvas 5 23 778 293 10;
+#N canvas 11 101 778 293 10;
 #X declare -lib jasch_lib;
-#X declare -path ../handy-abs -path ../pitch-abs;
+#X declare -path ../abs;
 #X obj 245 -678 bng 50 250 50 0 make_song set-make_song empty 17 7
 0 10 -262144 -261234 -1;
-#X obj -475 -618 cnv 15 770 30 empty verse1_canvas ||: C:maj C:maj G:maj C:maj G:maj E:min :||
+#X obj -475 -618 cnv 15 770 30 empty verse1_canvas ||: C:maj F:maj C:maj F:maj G:maj A:min A:min :||
 5 15 0 14 -66577 -262144 0;
-#X obj -475 -587 cnv 15 770 30 empty chorus1_canvas || G:maj G:maj F:maj G:maj ||
+#X obj -475 -587 cnv 15 770 30 empty chorus1_canvas || F:maj A:min F:maj A:min ||
 5 15 0 14 -66577 -262144 0;
 #X obj -475 -678 hradio 50 1 0 12 key_root set-key_root empty 0 -8
 0 10 -262144 -261234 -1 0;
@@ -38,9 +38,9 @@
 #X text -441 -445 save analysis (to avoid analysis time);
 #X text 258 -666 make;
 #X text 257 -654 song;
-#X obj -475 -556 cnv 15 770 30 empty verse2_canvas || C:maj C:maj G:maj C:maj G:maj E:min ||
+#X obj -475 -556 cnv 15 770 30 empty verse2_canvas || C:maj F:maj C:maj F:maj G:maj A:min A:min ||
 5 15 0 14 -66577 -262144 0;
-#X obj -475 -525 cnv 15 770 30 empty chorus2_canvas ||: G:maj G:maj F:maj G:maj :|| C:maj ||
+#X obj -475 -525 cnv 15 770 30 empty chorus2_canvas ||: F:maj A:min F:maj A:min :|| C:maj ||
 5 15 0 14 -66577 -262144 0;
 #X obj -146 -488 cnv 15 220 70 empty empty empty 20 12 0 14 -261234
 -66577 0;
@@ -131,10 +131,9 @@ a corpus before use.;
 \, something that will be expanded in future versions:;
 #X text 400 9 USAGE;
 #X restore -140 -439 pd notes and instructions;
-#N canvas 858 23 417 161 guts 0;
-#X obj 37 -468 import jasch_lib;
-#X obj -243 -468 declare -path ../handy-abs -path ../pitch-abs;
-#N canvas 57 89 442 231 krumhansl_profiles 0;
+#N canvas 852 128 417 161 guts 0;
+#X obj -113 -468 import jasch_lib;
+#N canvas 55 105 442 231 krumhansl_profiles 0;
 #X msg 5 124 6.33 2.68 3.52 5.38 2.6 3.53 2.54 4.75 3.98 2.69 3.34
 3.17;
 #X msg 32 44 6.35 2.23 3.48 2.33 4.38 4.09 2.52 5.19 2.39 3.66 2.29
@@ -156,7 +155,7 @@ a corpus before use.;
 #X connect 5 0 2 0;
 #X restore -243 -408 pd krumhansl_profiles;
 #X obj -43 -428 table profile 12;
-#N canvas 555 22 390 627 calculate_profiles_from_songs 0;
+#N canvas 553 96 390 627 calculate_profiles_from_songs 0;
 #X obj 43 284 textfile;
 #X floatatom 192 141 5 0 0 0 - - -;
 #X obj 8 80 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -222,7 +221,6 @@ a corpus before use.;
 #X obj -14 574 + 0.1;
 #X msg -1 58 refresh;
 #X obj 96 331 normalize;
-#X obj -3 119 listdir ../files/txt_chords/*.txt;
 #X obj -14 34 openpanel;
 #X obj -14 15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -278,56 +276,57 @@ a corpus before use.;
 #X msg 254 162 0;
 #X obj 243 32 t b b;
 #X msg 282 32 0;
+#X obj -3 119 listdir ../testfiles/txt_chords/*.txt;
 #X connect 0 0 5 0;
 #X connect 0 1 12 1;
-#X connect 0 1 27 0;
-#X connect 0 1 29 0;
-#X connect 2 0 19 0;
+#X connect 0 1 26 0;
+#X connect 0 1 28 0;
+#X connect 2 0 42 0;
 #X connect 3 0 6 0;
-#X connect 3 1 32 0;
+#X connect 3 1 31 0;
 #X connect 3 1 8 1;
 #X connect 4 0 3 0;
 #X connect 5 0 4 0;
 #X connect 6 0 9 0;
-#X connect 6 0 33 0;
+#X connect 6 0 32 0;
 #X connect 7 0 10 0;
-#X connect 8 0 24 0;
+#X connect 8 0 23 0;
 #X connect 9 0 8 0;
 #X connect 9 1 7 1;
 #X connect 10 0 11 0;
-#X connect 11 0 31 0;
-#X connect 11 1 30 1;
+#X connect 11 0 30 0;
+#X connect 11 1 29 1;
 #X connect 12 0 0 0;
 #X connect 13 0 14 0;
 #X connect 14 0 12 0;
 #X connect 14 1 0 0;
 #X connect 15 0 13 0;
-#X connect 15 1 28 0;
-#X connect 16 0 30 0;
-#X connect 17 0 19 0;
-#X connect 18 0 26 0;
+#X connect 15 1 27 0;
+#X connect 16 0 29 0;
+#X connect 17 0 42 0;
+#X connect 18 0 25 0;
 #X connect 19 0 15 0;
-#X connect 19 0 25 0;
-#X connect 19 1 1 0;
-#X connect 19 1 36 1;
-#X connect 20 0 15 0;
-#X connect 21 0 20 0;
-#X connect 24 0 7 0;
-#X connect 27 0 18 0;
-#X connect 31 0 16 0;
-#X connect 34 0 19 0;
-#X connect 34 0 37 0;
-#X connect 35 0 41 0;
-#X connect 36 0 39 0;
-#X connect 37 0 38 0;
-#X connect 37 0 36 0;
-#X connect 38 0 37 1;
-#X connect 39 0 40 0;
-#X connect 40 0 34 0;
-#X connect 41 0 34 0;
-#X connect 41 1 42 0;
-#X connect 41 1 17 0;
-#X connect 42 0 37 1;
+#X connect 20 0 19 0;
+#X connect 23 0 7 0;
+#X connect 26 0 18 0;
+#X connect 30 0 16 0;
+#X connect 33 0 36 0;
+#X connect 33 0 42 0;
+#X connect 34 0 40 0;
+#X connect 35 0 38 0;
+#X connect 36 0 37 0;
+#X connect 36 0 35 0;
+#X connect 37 0 36 1;
+#X connect 38 0 39 0;
+#X connect 39 0 33 0;
+#X connect 40 0 33 0;
+#X connect 40 1 41 0;
+#X connect 40 1 17 0;
+#X connect 41 0 36 1;
+#X connect 42 0 15 0;
+#X connect 42 0 24 0;
+#X connect 42 1 1 0;
+#X connect 42 1 35 1;
 #X restore -243 -428 pd calculate_profiles_from_songs;
 #N canvas 244 23 419 702 estimate_key_of_songs 0;
 #X obj 222 91 t b b;
@@ -2257,5 +2256,6 @@ u \; set-str7 symbol d \; set-str8 symbol u \; set-strumming_speed
 #X connect 14 0 9 0;
 #X connect 15 0 14 0;
 #X restore -243 -348 pd write_textfile;
+#X obj -243 -468 declare -path ../abs;
 #X restore 20 -439 pd guts;
 #X text -121 -486 export song to textfile;

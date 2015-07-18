@@ -1,6 +1,6 @@
-#N canvas 1315 174 463 663 10;
+#N canvas 5 104 463 663 10;
 #X declare -lib jasch_lib;
-#X declare -path ../handy-abs;
+#X declare -path ../abs;
 #X obj 65 275 textfile;
 #X floatatom 223 114 5 0 0 0 - - -;
 #X obj 38 67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -306,7 +306,6 @@
 #X text 82 44 or get all content of a folder;
 #X text 59 66 and retrieve files individually;
 #X text 8 632 angel.faraldo@upf.edu --- Barcelona \, 2015;
-#X obj 319 4 path ../handy-abs;
 #N canvas 117 76 874 655 chord_accumulation 0;
 #X obj 95 30 sel maj min aug dim sus4;
 #X obj 236 52 fromsymbol;
@@ -491,6 +490,7 @@
 #X connect 23 1 18 0;
 #X connect 25 0 7 0;
 #X restore 116 495 pd orden1_calculation;
+#X obj 319 4 path ../abs;
 #X connect 0 0 7 0;
 #X connect 0 1 16 1;
 #X connect 0 1 31 0;
@@ -498,15 +498,15 @@
 #X connect 2 0 35 0;
 #X connect 3 0 6 0;
 #X connect 3 1 5 0;
-#X connect 3 1 43 1;
+#X connect 3 1 42 1;
 #X connect 4 0 3 0;
 #X connect 5 0 12 1;
 #X connect 6 0 9 0;
 #X connect 7 0 4 0;
 #X connect 8 0 13 0;
 #X connect 9 0 8 0;
-#X connect 9 0 44 0;
 #X connect 9 0 43 0;
+#X connect 9 0 42 0;
 #X connect 10 0 11 0;
 #X connect 11 0 14 0;
 #X connect 12 0 10 0;
@@ -532,4 +532,4 @@
 #X connect 35 1 1 0;
 #X connect 36 0 19 0;
 #X connect 37 0 36 0;
-#X connect 43 0 45 0;
+#X connect 42 0 44 0;

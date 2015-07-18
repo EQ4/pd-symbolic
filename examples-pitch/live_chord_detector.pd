@@ -1,4 +1,4 @@
-#N canvas 484 52 784 646 10;
+#N canvas 482 96 784 646 10;
 #X declare -path ../abs;
 #X obj -360 -368 midiquantizer;
 #X obj -359 -648 notein;

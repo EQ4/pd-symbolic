@@ -1,4 +1,4 @@
-#N canvas 1 107 482 268 10;
+#N canvas 1 123 482 268 10;
 #X declare -lib jasch_lib;
 #X obj 190 198 outlet;
 #X obj 11 34 loadbang;
