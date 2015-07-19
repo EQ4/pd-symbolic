@@ -1,46 +1,35 @@
-#N canvas 849 101 401 640 10;
-#X obj 140 397 list prepend;
-#X obj 140 328 pack 0 0;
-#X obj 165 372 t f b;
-#X obj 27 162 inlet;
-#X obj 146 523 list;
-#X obj 146 545 outlet;
-#X obj 195 421 t l;
-#X obj 27 205 route 0;
-#X msg 27 184 \$3 \$1 \$2;
-#X msg 128 236 \$2 \$3;
-#X obj 128 279 t f f;
-#X obj 140 306 == 0;
-#X obj 128 257 unpack f f;
-#X obj 39 388 list prepend;
-#X obj 39 317 pack 0 0;
-#X obj 64 363 t f b;
-#X obj 93 410 t l;
-#X obj 27 267 t f f;
-#X obj 39 295 == 0;
-#X obj 27 244 unpack f f;
-#X obj 140 444 list length;
-#X obj 140 421 t l l;
-#X obj 140 349 route 1 0;
-#X obj 39 432 list length;
-#X obj 39 467 ==;
-#X obj 39 490 sel 1;
-#X obj 39 340 route 1 0;
-#X text 128 213 notes on;
-#X text 33 225 notes off;
-#X text 28 577 angel.faraldo@upf.edu --- Barcelona \, 2015;
-#X text 22 -28 [make_chord] expects incoming lists as formated by the
-[midi_quantizer] object. These should contain at least three numbers
-represeting (midi-tick \, midi-note \, velocity). It expect to receive
-note-off messages as "note-on with zero velocity \, " following the
-pd midi convention. ;
-#X text 23 50 Its aim is repackage individual midi notes as lists according
-to their timestamp \, as if they where chords played simultaneously.
-The object waits until an equivalent number of notes of is produced
-to produce an output.;
-#X text 23 110 WHILE THIS PROCEDURE SHOULD WORK WITH HOMOPHONIC FILES
-\, A BETTER AND SAFER WAY OF COMPUTING NOTES SHOULD BE ADDED \, TO
-COPE WITH MORE COUNTERPOINTAL INPUT.;
+#N canvas 845 135 307 490 10;
+#X obj 130 227 list prepend;
+#X obj 130 158 pack 0 0;
+#X obj 155 202 t f b;
+#X obj 17 -8 inlet;
+#X obj 136 353 list;
+#X obj 136 375 outlet;
+#X obj 185 251 t l;
+#X obj 17 35 route 0;
+#X msg 17 14 \$3 \$1 \$2;
+#X msg 118 66 \$2 \$3;
+#X obj 118 109 t f f;
+#X obj 130 136 == 0;
+#X obj 118 87 unpack f f;
+#X obj 29 218 list prepend;
+#X obj 29 147 pack 0 0;
+#X obj 54 193 t f b;
+#X obj 83 240 t l;
+#X obj 17 97 t f f;
+#X obj 29 125 == 0;
+#X obj 17 74 unpack f f;
+#X obj 130 274 list length;
+#X obj 130 251 t l l;
+#X obj 130 179 route 1 0;
+#X obj 29 262 list length;
+#X obj 29 297 ==;
+#X obj 29 320 sel 1;
+#X obj 29 170 route 1 0;
+#X text 118 43 notes on;
+#X text 23 55 notes off;
+#X text 16 409 https://github.com/angelfaraldo/pd-symbolic;
+#X text 16 424 angel.faraldo@upf.edu ----- Barcelona \, 2015;
 #X connect 0 0 6 0;
 #X connect 0 0 21 0;
 #X connect 1 0 22 0;

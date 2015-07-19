@@ -1,7 +1,7 @@
-#N canvas 5 97 611 151 10;
-#X declare -path ../handy-abs -path ../pitch-abs;
+#N canvas 11 97 611 151 10;
 #X declare -lib mrpeach;
-#N canvas 728 171 312 252 guts 0;
+#X declare -path ../abs;
+#N canvas 724 205 312 252 guts 0;
 #N canvas 46 23 864 609 sequence 0;
 #X obj -177 -187 + 1;
 #X obj -206 -187 f 0;
@@ -188,7 +188,6 @@
 #X connect 82 0 65 0;
 #X connect 82 0 83 0;
 #X restore -389 -1848 pd sequence;
-#X obj -389 -1919 declare -path ../handy-abs -path ../pitch-abs;
 #X obj -388 -1898 import mrpeach;
 #N canvas 607 30 413 664 tables 0;
 #X obj 121 -14 pc-tab25 4 minor;
@@ -685,7 +684,7 @@ la octava principal de Do a Do (36-48).;
 -0.0265503 -0.023468 -0.0222778 -0.021759 -0.0198975 -0.0171509 -0.0146179
 -0.0132446 -0.0109253 -0.00924683 -0.0085144 -0.00561523 -0.00253296
 -0.000518799 0.00146484 0.00341797 0.00482178 0.00622559 0.00991821
-0.0134888 0.0148621 0.0171814 0.0203247 0.0209961 ;
+0.0134888 0.0148621 0.0171814 0.0203247 0.0209961;
 #A 3000 0.0221252 0.0271912 0.0307922 0.031311 0.0326843 0.0349731
 0.0388184 0.0426941 0.0447998 0.0454712 0.0481262 0.052124 0.0544128
 0.0566101 0.0593262 0.0614929 0.0648193 0.0679932 0.0700378 0.0728455
@@ -21873,7 +21872,7 @@ la octava principal de Do a Do (36-48).;
 0.00152588 0.0038147 0.00271606 -0.000793457 -0.00482178 -0.00146484
 0.00344849 0.00137329 -0.000549316 0.000701904 -9.15527e-05 -0.00128174
 0.000701904 0.00253296 0.00146484 -0.0027771 -0.00238037 -0.000396729
-0.000183105 0.00183105 0.00372314;
+0.000183105 0.00183105 0.00372314 ;
 #A 147000 0.000640869 -0.00466919 -0.00418091 -0.0012207 -0.000183105
 0.0027771 0.00366211 0.00283813 0.000732422 -0.000152588 -0.00366211
 -0.00335693 0.00195312 0.00341797 0.000793457 -0.000762939 -0.000671387
@@ -50555,14 +50554,13 @@ la octava principal de Do a Do (36-48).;
 #X connect 8 0 3 0;
 #X connect 8 1 2 0;
 #X restore -236 -1874 pd drumloop;
-#N canvas 331 23 322 714 file_analysis 0;
+#N canvas 329 97 322 714 file_analysis 0;
 #X obj 10 -1708 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 37 -1709 refresh;
 #X obj 10 -1730 until;
 #X obj 57 -1344 key2pc;
 #X obj 53 -1661 s fileDir;
-#X obj 10 -1686 listdir ../testfiles/midi_basslines/*.mid;
 #X obj 90 -1324 s mode_number;
 #X obj 57 -1300 s key_number;
 #N canvas 383 23 853 713 midiextract 0;
@@ -50713,52 +50711,54 @@ la octava principal de Do a Do (36-48).;
 -1 -1;
 #X obj 18 -1793 del 200;
 #X obj 153 -1756 del 1000;
-#X connect 0 0 5 0;
-#X connect 1 0 5 0;
+#X obj 9 -1685 get_files ../testfiles/midi_basslines/*.mid;
+#X connect 0 0 37 0;
+#X connect 1 0 37 0;
 #X connect 2 0 0 0;
-#X connect 3 0 7 0;
-#X connect 3 1 6 0;
-#X connect 5 0 4 0;
-#X connect 5 0 11 0;
-#X connect 5 1 32 1;
+#X connect 3 0 6 0;
+#X connect 3 1 5 0;
+#X connect 7 0 8 0;
 #X connect 8 0 9 0;
-#X connect 9 0 10 0;
-#X connect 10 0 12 0;
-#X connect 10 1 13 0;
-#X connect 11 0 8 0;
-#X connect 11 1 23 0;
-#X connect 14 0 18 0;
-#X connect 15 0 14 0;
+#X connect 9 0 11 0;
+#X connect 9 1 12 0;
+#X connect 10 0 7 0;
+#X connect 10 1 22 0;
+#X connect 13 0 17 0;
+#X connect 14 0 13 0;
+#X connect 15 0 19 0;
 #X connect 16 0 20 0;
-#X connect 17 0 21 0;
-#X connect 17 1 16 0;
-#X connect 18 0 19 0;
-#X connect 19 0 17 0;
-#X connect 20 0 21 1;
-#X connect 21 1 3 0;
-#X connect 22 1 15 0;
-#X connect 23 0 25 0;
-#X connect 24 0 27 0;
-#X connect 25 0 26 0;
-#X connect 26 0 22 0;
-#X connect 26 1 24 0;
-#X connect 27 0 22 1;
-#X connect 28 0 29 0;
+#X connect 16 1 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 19 0 20 1;
+#X connect 20 1 3 0;
+#X connect 21 1 14 0;
+#X connect 22 0 24 0;
+#X connect 23 0 26 0;
+#X connect 24 0 25 0;
+#X connect 25 0 21 0;
+#X connect 25 1 23 0;
+#X connect 26 0 21 1;
+#X connect 27 0 28 0;
+#X connect 28 0 7 1;
 #X connect 29 0 8 1;
-#X connect 30 0 9 1;
-#X connect 32 0 2 0;
-#X connect 33 0 32 0;
-#X connect 33 1 1 0;
-#X connect 33 2 37 0;
-#X connect 34 0 36 0;
-#X connect 35 0 36 0;
-#X connect 36 0 33 0;
-#X connect 37 0 31 0;
+#X connect 31 0 2 0;
+#X connect 32 0 31 0;
+#X connect 32 1 1 0;
+#X connect 32 2 36 0;
+#X connect 33 0 35 0;
+#X connect 34 0 35 0;
+#X connect 35 0 32 0;
+#X connect 36 0 30 0;
+#X connect 37 0 4 0;
+#X connect 37 0 10 0;
+#X connect 37 1 31 1;
 #X restore -310 -1848 pd file_analysis;
 #X obj -389 -1824 loadbang;
 #X msg -389 -1801 \; set-key_root 0 \; set-key_mode 1 \; set-number_notes
 5 \; pd dsp 1;
-#X connect 7 0 8 0;
+#X obj -389 -1919 declare -path ../abs;
+#X connect 6 0 7 0;
 #X restore 69 -1545 pd guts;
 #X obj -485 -1653 hradio 50 1 0 12 key_root set-key_root empty 0 -8
 0 10 -262144 -261234 -1 0;
@@ -50780,7 +50780,7 @@ la octava principal de Do a Do (36-48).;
 #X obj -285 -1600 tgl 50 0 make_new reset_seq empty 17 7 0 10 -262144
 -261234 -1 0 1;
 #X obj -482 -1600 hsl 129 50 3 30 0 0 number_notes set-number_notes
-empty -2 -8 0 10 -262144 -261234 -1 948 1;
+empty -2 -8 0 10 -262144 -261234 -1 0 1;
 #X text -268 -1566 new;
 #X text -485 -1584 3;
 #X text -365 -1584 30;
@@ -50790,7 +50790,7 @@ empty -2 -8 0 10 -262144 -261234 -1 948 1;
 #X obj -115 -1574 cnv 15 50 20 empty empty house 0 12 0 17 -261234
 -66577 0;
 #X obj 15 -1600 hradio 50 1 0 2 key_mode set-key_mode empty 0 -8 0
-10 -262144 -261234 -1 1;
+10 -262144 -261234 -1 0;
 #X text 80 -1584 min;
 #X text 30 -1584 maj;
 #X text -481 -1545 THIS PATCH GENERATES MIDI OUTPUT!;

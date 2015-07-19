@@ -1,4 +1,4 @@
-#N canvas 505 23 621 386 10;
+#N canvas 598 114 632 418 10;
 #X symbolatom 9 323 15 0 0 0 - - -;
 #X msg 9 199 72 67 64 64 48 60 55;
 #X msg 9 179 60 48 64 67 72 55;
@@ -16,7 +16,6 @@
 #X text 69 108 and with midi notes;
 #X msg 9 129 67 71 74 65;
 #X text 120 178 even with duplicate notes or pitch-classes;
-#X text 8 345 angel.faraldo@upf.edu --- Barcelona \, 2015;
 #X obj 9 246 list-apply + 0;
 #X text 233 80 TO DO: currently \, when the system does not recognise
 a chord \, it does not warn or output anything. This should be fixed
@@ -32,17 +31,19 @@ with root \, type and inversion from incoming lists. These are expected
 to represent either midi notes or pc-sets. For it to work properly
 \, chord intervalic structure must be first declared on a separate
 textfile.;
-#X connect 1 0 18 0;
-#X connect 2 0 18 0;
-#X connect 3 0 18 0;
-#X connect 4 0 18 0;
-#X connect 6 0 18 0;
-#X connect 7 0 18 2;
-#X connect 8 0 18 0;
-#X connect 9 0 18 0;
-#X connect 10 0 18 0;
-#X connect 15 0 18 0;
-#X connect 18 0 23 0;
-#X connect 20 0 18 0;
-#X connect 23 0 0 0;
-#X connect 23 1 5 0;
+#X text 10 368 https://github.com/angelfaraldo/pd-symbolic;
+#X text 10 383 angel.faraldo@upf.edu ----- Barcelona \, 2015;
+#X connect 1 0 17 0;
+#X connect 2 0 17 0;
+#X connect 3 0 17 0;
+#X connect 4 0 17 0;
+#X connect 6 0 17 0;
+#X connect 7 0 17 2;
+#X connect 8 0 17 0;
+#X connect 9 0 17 0;
+#X connect 10 0 17 0;
+#X connect 15 0 17 0;
+#X connect 17 0 22 0;
+#X connect 19 0 17 0;
+#X connect 22 0 0 0;
+#X connect 22 1 5 0;

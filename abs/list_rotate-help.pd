@@ -1,0 +1,13 @@
+#N canvas 191 456 351 218 10;
+#X obj 15 117 print;
+#X text 13 149 https://github.com/angelfaraldo/pd-symbolic;
+#X text 13 164 angel.faraldo@upf.edu ----- Barcelona \, 2015;
+#X obj 15 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 79 63 1 2 3 4 5 6 7 8 9;
+#X text 80 39 set the list to rotate;
+#X text 9 7 circular rotation of the elements in a list.;
+#X obj 15 91 list_rotate;
+#X connect 3 0 7 0;
+#X connect 4 0 7 1;
+#X connect 7 0 0 0;

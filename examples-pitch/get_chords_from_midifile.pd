@@ -1,7 +1,7 @@
-#N canvas 724 156 385 409 10;
+#N canvas 718 207 371 449 10;
 #X declare -lib jasch_lib;
 #X declare -path ../abs;
-#X symbolatom -92 261 10 0 0 0 - - -;
+#X symbolatom -90 261 10 0 0 0 - - -;
 #X obj -121 53 openpanel;
 #X obj -121 32 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -14,22 +14,24 @@
 ;
 #X msg -6 53 play \$1;
 #X msg -54 53 flush;
-#X floatatom 15 262 5 0 0 0 - - -;
-#X obj -102 239 midi_chord_estimator;
+#X floatatom 17 262 5 0 0 0 - - -;
+#X obj -100 239 midi_chord_estimator;
 #X msg 114 53 quantize \$1;
 #X obj 114 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj -64 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text -43 161 done;
-#X obj -88 210 print make_chords;
-#X obj -102 185 make_chord;
-#X text 24 208 groups chords in separate lists;
-#X obj -102 318 vocabulary_reduction majmin;
-#X obj -92 286 print complete_spelling;
-#X obj -102 344 print reduced;
+#X obj -86 210 print make_chords;
+#X obj -100 185 make_chord;
+#X text 26 208 groups chords in separate lists;
+#X obj -100 318 vocabulary_reduction majmin;
+#X obj -90 286 print complete_spelling;
+#X obj -100 344 print reduced;
 #X obj -119 2 path ../abs;
-#X obj -121 141 midiplayer;
+#X obj -121 141 midi_player;
+#X text -122 392 https://github.com/angelfaraldo/pd-symbolic;
+#X text -122 407 angel.faraldo@upf.edu ----- Barcelona \, 2015;
 #X connect 0 0 20 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;

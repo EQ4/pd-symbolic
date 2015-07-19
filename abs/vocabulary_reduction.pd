@@ -1,4 +1,4 @@
-#N canvas 1 123 482 268 10;
+#N canvas 1 140 482 268 10;
 #X declare -lib jasch_lib;
 #X obj 190 198 outlet;
 #X obj 11 34 loadbang;
@@ -11,7 +11,7 @@
 #X obj 178 30 strtok :;
 #X obj 178 51 unpack s s;
 #X obj 178 8 inlet;
-#N canvas 255 239 934 528 majmin 0;
+#N canvas 253 256 934 528 majmin 0;
 #X obj -16 12 inlet;
 #X obj -16 34 fromsymbol;
 #X obj -16 56 route float;

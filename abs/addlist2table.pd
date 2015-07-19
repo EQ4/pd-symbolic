@@ -1,4 +1,4 @@
-#N canvas 729 308 450 424 10;
+#N canvas 727 325 450 424 10;
 #X obj 151 9 inlet;
 #X obj 306 40 inlet;
 #X text 302 22 table name;

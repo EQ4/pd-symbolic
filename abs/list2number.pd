@@ -1,13 +1,12 @@
-#N canvas 820 72 395 201 10;
-#X obj 5 90 list2symbol;
-#X msg 68 69 symbol;
-#X obj 5 113 fromsymbol;
-#X obj 68 48 loadbang;
-#X obj 5 49 inlet;
-#X obj 5 135 outlet;
-#X text 5 165 angel.faraldo@upf.edu --- 2015;
-#X text 2 8 This object receives a list and collapses it into a single
-number.;
+#N canvas 816 114 306 180 10;
+#X obj -25 60 list2symbol;
+#X msg 38 39 symbol;
+#X obj -25 83 fromsymbol;
+#X obj 38 18 loadbang;
+#X obj -25 16 inlet;
+#X obj -25 105 outlet;
+#X text -23 126 https://github.com/angelfaraldo/pd-symbolic;
+#X text -23 141 angel.faraldo@upf.edu ----- Barcelona \, 2015;
 #X connect 0 0 2 0;
 #X connect 1 0 0 1;
 #X connect 2 0 5 0;

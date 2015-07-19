@@ -1,48 +1,48 @@
-#N canvas 101 155 931 445 10;
+#N canvas 97 189 857 440 10;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array tabla 12 float 1;
 #A 0 0.000746029 0.00247262 0.00816257 0.026597 0.0831727 0.231475
 0.5 0.768525 0.916827 0.973403 0.991837 0.997527;
 #X coords 0 1 11 0 200 140 1 0 0;
-#X restore 494 60 graph;
-#X obj 94 140 vsl 15 129 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X restore 414 48 graph;
+#X obj 14 128 vsl 15 129 -1 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X msg 640 404 \; tabla xticks 1 1 1;
-#X obj 640 385 loadbang;
+#X msg 560 392 \; tabla xticks 1 1 1;
+#X obj 560 370 loadbang;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array probabilities 12 float 1;
 #A 0 0.489812 0.46124 0.425526 0.311239 0.304097 0.232668 0.161239
 0.254096 0.325525 0.225525 0.246953 0.246953;
 #X coords 0 1 11 0 200 140 1 0 0;
-#X restore 703 60 graph;
+#X restore 623 48 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array result 12 float 1;
 #A 0 0.000730828 0.00228095 0.00694677 0.016556 0.0505851 0.107714
 0.161239 0.390558 0.5969 0.439053 0.489874 0.492685;
 #X coords 0 1 11 0 200 140 1 0 0;
-#X restore 602 216 graph;
-#X obj 94 354 tabset result;
-#X obj 163 227 tabdump probabilities;
-#X msg 163 197 bang;
-#X text 293 226 input a list of numbers (12 in this example);
-#X text 176 272 <- creation argument: number of elements in the list
+#X restore 522 204 graph;
+#X obj 14 342 tabset result;
+#X obj 71 215 tabdump probabilities;
+#X msg 71 185 bang;
+#X text 213 214 input a list of numbers (12 in this example);
+#X text 96 260 <- creation argument: number of elements in the list
 ;
-#X text 94 372 outputs the n nubers weighted by the sigmoid curve;
-#X text 182 285 - if no size is selected the sigmoid adjusts to the
+#X text 14 360 outputs the n nubers weighted by the sigmoid curve;
+#X text 102 273 - if no size is selected the sigmoid adjusts to the
 size of the list.;
-#X obj 163 329 tabwrite tabla;
-#X text 92 414 daniel.gomez@upf.edu;
-#X text 94 403 daniel gomez 2015;
-#X text 251 329 for visaualization purposes \, the sigmoid is output
+#X obj 71 317 tabwrite tabla;
+#X text 12 402 daniel.gomez@upf.edu;
+#X text 14 391 daniel gomez 2015;
+#X text 159 317 for visaualization purposes \, the sigmoid is output
 ;
-#X msg 94 116 0;
-#X obj 90 21 cnv 15 100 20 empty empty sigmoid 20 10 1 20 -233017 -66577
+#X msg 14 104 0;
+#X obj 10 9 cnv 15 100 20 empty empty sigmoid 20 10 1 20 -233017 -66577
 0;
-#X text 89 39 This object gives a sigmoid weight to a list of numbers.
+#X text 9 27 This object gives a sigmoid weight to a list of numbers.
 The input is the list and the output is the weighted list. It can be
 used to transform in real time the response of a system based on Markov
 chains by emphasizing (or not) some regions of the probabilities.;
-#X obj 94 275 a.sigmoid 12;
+#X obj 14 263 sigmoid 12;
 #X connect 1 0 20 0;
 #X connect 3 0 2 0;
 #X connect 7 0 20 1;

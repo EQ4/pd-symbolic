@@ -1,4 +1,4 @@
-#N canvas 3 96 618 158 10;
+#N canvas 4 103 618 158 10;
 #X declare -path ../abs;
 #X obj -491 -750 hradio 50 1 0 12 key_root set-key_root empty 0 -8
 0 10 -262144 -261234 -1 0;
@@ -41,7 +41,7 @@
 #X text -488 -634 THIS PATCH GENERATES MIDI OUTPUT!;
 #X text -284 -634 YOU HAVE TO CONNECT IT TO A MIDI SYNTH TO LISTEN
 ;
-#N canvas 145 214 787 719 gutssssssssss 0;
+#N canvas 141 248 787 719 gutssssssssss 0;
 #X obj -101 -471 list-wrandom;
 #X obj -74 -109 + 0;
 #X msg -74 -68 \$1 120;
@@ -79,14 +79,14 @@
 #X obj -479 -650 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text -453 -651 "bang" to retrieve ALL FILES!;
-#N canvas 799 96 594 852 extract_ground_truth 0;
+#N canvas 797 113 594 852 extract_ground_truth 0;
 #X obj -290 -77 mrpeach/midifile;
 #X msg -290 -132 read \$1;
 #X obj -290 0 route 144 145 146 147 148 149 150 151 152 153 154 155
 156 157 158 159;
 #X obj -290 68 unpack 0 0;
 #X obj -197 -54 route bang;
-#X floatatom -98 -290 5 0 0 0 - - -;
+#X floatatom -99 -290 5 0 0 0 - - -;
 #X obj -416 -90 list split 1;
 #X obj -416 -111 jasch_lib/strtok .;
 #X obj -359 -7 length;
@@ -96,7 +96,7 @@
 #X obj -359 15 - 1;
 #X obj -416 36 list split;
 #X obj -388 58 key2pc;
-#X text -58 -291 number of midi files in folder;
+#X text -59 -291 number of midi files in folder;
 #X obj -280 -101 until;
 #X obj -243 189 -;
 #X obj -389 82 t b f;
@@ -125,7 +125,7 @@
 #X obj -408 -201 t l l;
 #X obj -381 -158 - 1;
 #X obj -160 -136 loadbang;
-#X obj -317 -314 listdir ../testfiles/midi_basslines/*.mid;
+#X obj -317 -314 get_files ../testfiles/midi_basslines/*.mid;
 #X connect 0 0 2 0;
 #X connect 0 2 4 0;
 #X connect 1 0 0 0;
