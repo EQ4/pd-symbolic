@@ -1,11 +1,11 @@
-#N canvas 554 50 661 450 10;
+#N canvas 550 100 661 450 10;
 #X obj 294 252 nbx 5 14 0 32 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 4 256;
 #X obj 143 395 print kick;
 #X obj 209 395 print snare;
 #X obj 281 395 print ch;
 #X text 243 235 Length of patterns in beats;
-#N canvas 380 211 817 480 makepatterns 0;
+#N canvas 376 235 817 480 makepatterns 0;
 #X obj 31 30 inlet;
 #X obj 118 71 inlet;
 #X obj 271 40 inlet;
@@ -153,7 +153,7 @@
 #X restore 143 333 pd makepatterns;
 #X obj 152 223 nbx 5 14 0 16 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 10 256;
-#N canvas 474 35 761 601 midiextract 0;
+#N canvas 472 88 761 601 midiextract 0;
 #X msg 78 82 read \$1;
 #X obj 204 174 route bang format tracks ticks_per_quarternote;
 #X obj -4 94 loadbang;
@@ -260,7 +260,7 @@ b) the midi channel in which the drums are sequenced.;
 start in time=0. That is \, there can be no silence before the sequence
 starts.;
 #X msg 350 316 35 38 42 46;
-#X msg 30 162 ../files/midi_drumloops/motown.mid;
+#X msg 30 162 ../testfiles/midi-drum-loops/motown.mid;
 #X connect 0 0 5 3;
 #X connect 0 0 7 2;
 #X connect 5 0 1 0;

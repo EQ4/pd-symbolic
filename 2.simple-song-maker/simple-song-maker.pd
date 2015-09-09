@@ -1,12 +1,12 @@
-#N canvas 543 214 778 293 10;
+#N canvas 588 88 778 295 10;
 #X declare -lib jasch_lib;
 #X declare -path ../abs;
 #X obj 245 -678 bng 50 250 50 0 make_song set-make_song empty 17 7
 0 10 -262144 -261234 -1;
-#X obj -475 -618 cnv 15 100 60 empty verse1_canvas ||: 20 12 0 14 -233017
--66577 0;
-#X obj -475 -587 cnv 15 100 60 empty chorus1_canvas || 20 12 0 14 -233017
--66577 0;
+#X obj -475 -618 cnv 15 770 30 empty verse1_canvas ||: C:maj Bb:maj C:maj G:maj :||
+5 15 0 14 -66577 -262144 0;
+#X obj -475 -587 cnv 15 770 30 empty chorus1_canvas || B:maj G:maj A:min F:maj ||
+5 15 0 14 -66577 -262144 0;
 #X obj -475 -678 hradio 50 1 0 12 key_root set-key_root empty 0 -8
 0 10 -262144 -261234 -1 0;
 #X text -453 -661 C;
@@ -35,13 +35,12 @@
 10 -262144 -1 -1;
 #X text -441 -484 clear previous analysis;
 #X text -441 -464 analyze folder (it might take a few seconds!);
-#X text -441 -445 save analysis (to avoid analysis time);
 #X text 258 -666 make;
 #X text 257 -654 song;
-#X obj -475 -556 cnv 15 100 60 empty verse2_canvas || 20 12 0 14 -233017
--66577 0;
-#X obj -475 -525 cnv 15 100 60 empty chorus2_canvas ||: 20 12 0 14
--233017 -66577 0;
+#X obj -475 -556 cnv 15 770 30 empty verse2_canvas || C:maj Bb:maj C:maj G:maj ||
+5 15 0 14 -66577 -262144 0;
+#X obj -475 -525 cnv 15 770 30 empty chorus2_canvas ||: B:maj G:maj A:min F:maj :|| C:maj ||
+5 15 0 14 -66577 -262144 0;
 #X obj -146 -488 cnv 15 220 70 empty empty empty 20 12 0 14 -261234
 -66577 0;
 #X obj -142 -484 bng 15 250 50 0 write_song empty empty 17 7 0 10 -262144
@@ -52,15 +51,14 @@
 #X obj 84 -488 cnv 15 210 70 empty empty empty 20 12 0 14 -261234 -66577
 0;
 #X obj 231 -458 nbx 5 14 -1e+37 1e+37 0 0 strumming_speed set-strumming_speed
-empty 0 -8 0 10 -262144 -1 -1 0 256;
+empty 0 -8 0 10 -262144 -1 -1 11 256;
 #X obj 231 -477 nbx 5 14 -1e+37 1e+37 0 0 tempo set-tempo empty 0 -8
-0 10 -262144 -1 -1 0 256;
+0 10 -262144 -1 -1 290 256;
 #X text 190 -480 tempo;
 #X obj 95 -478 tgl 50 0 play set-play empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X text 107 -468 play;
 #X text 107 -453 song;
-#X text 155 -460 strum speed;
 #X obj 121 -614 cnv 15 170 115 empty empty empty 20 12 0 14 -261234
 -66577 0;
 #X symbolatom 125 -592 3 0 0 0 - set-str1 str1;
@@ -79,7 +77,7 @@ empty 0 -8 0 10 -262144 -1 -1 0 256;
 #X text 126 -516 ux - stop upwards;
 #X obj -146 -444 cnv 15 220 25 empty empty empty 20 12 0 14 -258113
 -66577 0;
-#N canvas 293 191 779 432 notes 0;
+#N canvas 289 215 779 432 notes 0;
 #X text 10 9 SIMPLE SONG MAKER creates pop song's chord structures
 based on corpus analysis of transcriptions downloaded from the internet.
 The user could provide any corpus for analysis as separate textfiles
@@ -131,9 +129,9 @@ a corpus before use.;
 \, something that will be expanded in future versions:;
 #X text 400 9 USAGE;
 #X restore -140 -439 pd notes and instructions;
-#N canvas 893 166 417 161 guts 0;
-#X obj -113 -468 import jasch_lib;
-#N canvas 55 105 442 231 krumhansl_profiles 0;
+#N canvas 886 214 417 161 guts 0;
+#X obj -107 -468 import jasch_lib;
+#N canvas 53 117 442 231 krumhansl_profiles 0;
 #X msg 5 124 6.33 2.68 3.52 5.38 2.6 3.53 2.54 4.75 3.98 2.69 3.34
 3.17;
 #X msg 32 44 6.35 2.23 3.48 2.33 4.38 4.09 2.52 5.19 2.39 3.66 2.29
@@ -155,9 +153,9 @@ a corpus before use.;
 #X connect 5 0 2 0;
 #X restore -243 -408 pd krumhansl_profiles;
 #X obj -43 -428 table profile 12;
-#N canvas 551 113 390 627 calculate_profiles_from_songs 0;
+#N canvas 545 149 390 627 calculate_profiles_from_songs 0;
 #X obj 43 284 textfile;
-#X floatatom 192 141 5 0 0 0 - - -;
+#X floatatom 228 195 5 0 0 0 - - -;
 #X obj 8 80 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj -14 358 unpack s s;
@@ -276,7 +274,7 @@ a corpus before use.;
 #X msg 254 162 0;
 #X obj 243 32 t b b;
 #X msg 282 32 0;
-#X obj -3 119 get_files ../testfiles/txt_chords/*.txt;
+#X obj -3 119 get_files ../testfiles/txt-chords/*.txt;
 #X connect 0 0 5 0;
 #X connect 0 1 12 1;
 #X connect 0 1 26 0;
@@ -328,7 +326,7 @@ a corpus before use.;
 #X connect 42 1 1 0;
 #X connect 42 1 35 1;
 #X restore -243 -428 pd calculate_profiles_from_songs;
-#N canvas 242 97 433 750 estimate_key_of_songs 0;
+#N canvas 240 109 433 750 estimate_key_of_songs 0;
 #X obj 222 91 t b b;
 #X obj 214 273 t l;
 #X obj 131 356 list;
@@ -498,7 +496,7 @@ a corpus before use.;
 #X connect 38 0 39 0;
 #X connect 39 0 9 0;
 #X restore -109 -408 pd estimate_key_of_songs;
-#N canvas 69 23 499 678 make_1st_order_chord_transition_tables 0;
+#N canvas 67 88 565 819 make_1st_order_chord_transition_tables 0;
 #X obj 124 -336 sel maj min aug dim sus4;
 #X obj 265 -315 fromsymbol;
 #X obj 265 -293 sel 7;
@@ -607,7 +605,7 @@ a corpus before use.;
 #X connect 43 3 23 0;
 #X connect 44 0 28 0;
 #X restore -243 -388 pd make_1st_order_chord_transition_tables;
-#N canvas 668 22 293 678 transition_tables 0;
+#N canvas 666 88 293 678 transition_tables 0;
 #X obj 25 325 tab72 12 minor;
 #X obj 25 50 tab72 1 minor;
 #X obj 25 25 tab72 0 minor;
@@ -753,7 +751,7 @@ a corpus before use.;
 #X obj 135 1775 tab72 70 major;
 #X obj 135 1800 tab72 71 major;
 #X restore 11 -388 pd transition_tables;
-#N canvas 55 23 1133 716 generate_song 0;
+#N canvas 51 100 1133 716 generate_song 0;
 #X obj 36 156 list-wrandom;
 #X obj 105 43 route 0 1;
 #X obj 159 -13 t f f;
@@ -1734,7 +1732,7 @@ a corpus before use.;
 #X connect 138 0 62 0;
 #X connect 139 0 106 0;
 #X restore -243 -368 pd generate_song;
-#N canvas 254 23 479 687 midi-fake-guitar 0;
+#N canvas 252 88 483 897 midi-fake-guitar 0;
 #X obj 25 519 t l b;
 #X obj 99 587 f 6;
 #X obj 131 587 - 1;
@@ -2198,7 +2196,7 @@ a corpus before use.;
 #X connect 56 1 5 1;
 #X connect 56 2 39 1;
 #X restore -140 -368 pd midi-fake-guitar;
-#N canvas 712 121 489 503 loadbangs 0;
+#N canvas 710 133 489 503 loadbangs 0;
 #X obj -20 -126 loadbang;
 #X obj -20 183 delay 500;
 #X obj -20 205 s load-tables;
@@ -2218,7 +2216,7 @@ u \; set-str7 symbol d \; set-str8 symbol u \; set-strumming_speed
 #X connect 5 0 1 0;
 #X connect 5 0 3 0;
 #X restore -242 -448 pd loadbangs;
-#N canvas 652 240 401 388 write_textfile 0;
+#N canvas 650 252 401 388 write_textfile 0;
 #X obj 55 320 textfile;
 #X msg 230 155 clear;
 #X obj 55 115 list;
@@ -2259,3 +2257,5 @@ u \; set-str7 symbol d \; set-str8 symbol u \; set-strumming_speed
 #X obj -243 -468 declare -path ../abs;
 #X restore 20 -439 pd guts;
 #X text -121 -486 export song to textfile;
+#X text -441 -445 save analysis (to avoid analysing next time);
+#X text 149 -460 string i.o.t;

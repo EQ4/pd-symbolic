@@ -1,4 +1,4 @@
-#N canvas 5 130 816 818 10;
+#N canvas 160 133 637 808 10;
 #X declare -path ../abs;
 #X obj -136 -318 openpanel;
 #X obj -136 -339 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -50,7 +50,7 @@
 #X text -222 -459 "refresh" to get list of files and init;
 #X obj -269 -434 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 426 300 495 576 extract_ground_truth 0;
+#N canvas 444 346 588 585 extract_ground_truth 0;
 #X floatatom -261 -334 5 0 0 0 - - -;
 #X obj -388 -7 list split 1;
 #X obj -388 -28 jasch_lib/strtok .;
@@ -78,7 +78,7 @@
 #X obj -370 -346 t b;
 #X obj -223 -298 - 1;
 #X obj -261 -298 f;
-#X obj -289 -231 get_files ../testfiles/midi_chords/deep_house/4_bar/*.mid
+#X obj -289 -231 get_files ../testfiles/midi-chord-loops/2b-homophonic/*.mid
 ;
 #X connect 0 0 26 0;
 #X connect 1 0 5 0;
@@ -131,19 +131,19 @@
 #X obj -118 166 print LOW/HIGH;
 #X obj -116 146 list;
 #X msg 48 -295 panic;
-#X obj -285 -509 declare -path ../abs;
 #X obj -66 -15 normal_form;
 #X obj 191 -24 mode;
 #X obj -146 -249 midi_player;
+#X obj -285 -509 declare -path ../abs;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
-#X connect 2 0 65 0;
-#X connect 4 0 65 0;
+#X connect 2 0 64 0;
+#X connect 4 0 64 0;
 #X connect 5 0 4 0;
 #X connect 6 0 7 0;
-#X connect 7 0 65 0;
+#X connect 7 0 64 0;
 #X connect 8 0 21 0;
-#X connect 10 0 65 0;
+#X connect 10 0 64 0;
 #X connect 11 0 10 0;
 #X connect 13 0 24 0;
 #X connect 13 0 39 0;
@@ -155,9 +155,9 @@
 #X connect 19 0 18 0;
 #X connect 20 0 15 0;
 #X connect 20 1 12 0;
-#X connect 21 0 65 0;
+#X connect 21 0 64 0;
 #X connect 21 1 18 1;
-#X connect 23 0 63 0;
+#X connect 23 0 62 0;
 #X connect 24 0 54 0;
 #X connect 25 0 26 0;
 #X connect 26 0 30 0;
@@ -175,7 +175,7 @@
 #X connect 35 0 36 0;
 #X connect 36 0 58 0;
 #X connect 37 0 58 1;
-#X connect 39 0 64 0;
+#X connect 39 0 63 0;
 #X connect 41 0 44 0;
 #X connect 43 0 44 0;
 #X connect 44 0 46 0;
@@ -191,12 +191,12 @@
 #X connect 56 0 55 0;
 #X connect 58 0 60 1;
 #X connect 60 0 59 0;
-#X connect 61 0 65 0;
-#X connect 63 0 24 1;
-#X connect 63 1 40 0;
-#X connect 64 0 53 0;
-#X connect 64 1 38 0;
-#X connect 65 0 3 0;
-#X connect 65 1 19 0;
-#X connect 65 2 20 0;
-#X connect 65 3 13 0;
+#X connect 61 0 64 0;
+#X connect 62 0 24 1;
+#X connect 62 1 40 0;
+#X connect 63 0 53 0;
+#X connect 63 1 38 0;
+#X connect 64 0 3 0;
+#X connect 64 1 19 0;
+#X connect 64 2 20 0;
+#X connect 64 3 13 0;

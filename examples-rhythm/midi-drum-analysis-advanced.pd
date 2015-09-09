@@ -1,4 +1,4 @@
-#N canvas 594 144 1267 699 10;
+#N canvas 590 168 1267 699 10;
 #X declare -path ../abs;
 #X obj 189 -572 nbx 5 14 0 32 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 8 256;
@@ -365,7 +365,7 @@ starts.;
 #X restore 1032 -440 graph;
 #X obj 1035 -466 hsl 195 15 -1 1 0 0 oh-sigmoid nor oh-sigmoid 60 7
 1 14 -1 -261234 -262144 0 1;
-#N canvas 1 22 1265 678 sort-all-by-metrical-weight-and-send-to-sigmoids
+#N canvas 1 88 1265 678 sort-all-by-metrical-weight-and-send-to-sigmoids
 0;
 #X obj 86 -703 inlet;
 #N canvas 170 290 678 509 sortbasedonA 0;
@@ -975,7 +975,7 @@ utilities;
 #X obj 200 -297 symbol;
 #X obj 49 -366 t b b b b b;
 #X msg 49 -331 none;
-#N canvas 172 96 450 300 samples 0;
+#N canvas 170 108 450 300 samples 0;
 #X obj 118 54 loadbang;
 #X obj 108 234 soundfiler;
 #X obj 185 97 table k;
@@ -1014,7 +1014,7 @@ utilities;
 #X obj 108 -467 addlist2table ch;
 #X obj 137 -486 addlist2table oh;
 #X obj 173 -127 declare -path ../abs;
-#X msg 50 -626 ../testfiles/midi_drumloops/motown.mid;
+#X msg 50 -626 ../testfiles/midi-drum-loops/motown.mid;
 #X connect 0 0 2 3;
 #X connect 0 0 4 2;
 #X connect 2 0 74 0;

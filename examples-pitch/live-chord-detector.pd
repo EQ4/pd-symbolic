@@ -1,0 +1,23 @@
+#N canvas 602 110 493 275 10;
+#X declare -path ../abs;
+#X obj -246 -495 notein;
+#X symbolatom -246 -336 15 0 0 0 - - -;
+#X floatatom -129 -365 5 0 0 0 - - -;
+#X text -148 -336 chord name;
+#X text -92 -366 inversion (0 = root \, 1 = first inversion \, etc)
+;
+#X obj -234 -441 noteout;
+#X obj -246 -466 pack 0 0 0;
+#X obj -245 -517 declare -path ../abs;
+#X obj -246 -415 chordify;
+#X text -243 -308 https://github.com/angelfaraldo/pd-symbolic;
+#X text -243 -293 angel.faraldo@upf.edu ----- Barcelona \, 2015;
+#X obj -246 -389 midi_chord_estimator;
+#X connect 0 0 6 0;
+#X connect 0 1 6 1;
+#X connect 0 2 6 2;
+#X connect 6 0 5 0;
+#X connect 6 0 8 0;
+#X connect 8 0 11 0;
+#X connect 11 0 1 0;
+#X connect 11 1 2 0;

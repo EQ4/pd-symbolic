@@ -1,4 +1,4 @@
-#N canvas 1 155 463 663 10;
+#N canvas 675 147 463 663 10;
 #X declare -lib jasch_lib;
 #X declare -path ../abs;
 #X obj 65 275 textfile;
@@ -490,7 +490,7 @@
 #X connect 25 0 7 0;
 #X restore 116 495 pd orden1_calculation;
 #X obj 319 4 path ../abs;
-#X obj 27 90 get_files ../testfiles/txt_chords/*.txt;
+#X obj 27 90 get_files ../testfiles/txt-chords/*.txt;
 #X connect 0 0 7 0;
 #X connect 0 1 16 1;
 #X connect 0 1 31 0;

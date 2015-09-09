@@ -1,7 +1,7 @@
-#N canvas 1 165 527 604 10;
+#N canvas 676 175 527 604 10;
 #X declare -lib jasch_lib;
 #X declare -path ../abs;
-#X floatatom 296 150 5 0 0 0 - - -;
+#X floatatom 307 150 5 0 0 0 - - -;
 #X obj -24 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 0 465 mod 12;
@@ -231,18 +231,18 @@
 1;
 #X text -82 10 NOT WORKING PROPERLY YET!!;
 #X obj 256 13 path ../abs;
-#X obj -44 127 get_files ../testfiles/midi_chords/deep_house/4_bar/*.mid
-;
 #X obj -64 314 midi_player;
-#X connect 1 0 38 0;
+#X obj -44 127 get_files ../testfiles/midi-chord-loops/2b-homophonic/*.mid
+;
+#X connect 1 0 39 0;
 #X connect 2 0 3 0;
 #X connect 3 0 9 0;
 #X connect 3 1 8 1;
-#X connect 6 0 38 0;
+#X connect 6 0 39 0;
 #X connect 9 0 20 0;
 #X connect 11 0 10 0;
-#X connect 15 0 39 0;
-#X connect 16 0 39 0;
+#X connect 15 0 38 0;
+#X connect 16 0 38 0;
 #X connect 17 1 19 0;
 #X connect 18 0 16 0;
 #X connect 18 1 15 0;
@@ -257,10 +257,10 @@
 #X connect 30 0 17 0;
 #X connect 32 0 31 0;
 #X connect 35 0 32 1;
-#X connect 38 0 12 0;
-#X connect 38 0 18 0;
-#X connect 38 1 0 0;
-#X connect 39 1 30 0;
-#X connect 39 1 32 0;
-#X connect 39 3 14 0;
-#X connect 39 3 21 0;
+#X connect 38 1 30 0;
+#X connect 38 1 32 0;
+#X connect 38 3 14 0;
+#X connect 38 3 21 0;
+#X connect 39 0 12 0;
+#X connect 39 0 18 0;
+#X connect 39 1 0 0;

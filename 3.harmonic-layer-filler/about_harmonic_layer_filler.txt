@@ -1,0 +1,38 @@
+so I have been trying to conceptualize a bit what could be done for the deliverable at the end of september, regarding my contribution to interacting with pitch. I made a dummy Pd-interface with some potential functionalities... of course many things can be added, and some of them, probably will not be available before the end of the month, but is probably worth projecting a bit into the future, ISMIR and the Bayesian Orchestra in the horizon and the final giant steps not so far...
+
+Daniel and I were having a conversation during lunch and this is more or less what came out:
+
+a) we present an environment on which the user can load a midi loop among a collection of existing ones. This will be the reference loop on which variations in real time will be performed.
+
+
+
+b) we analyze the loop in terms of onsets and chords, in order to extract two different layers of information:
+
+b1) the onset layer will be processed in a "daniel's manner" using his agnostic density transformer to allow for rhythmic density variations maintaining the original's basic rhythmic feel.
+
+b2) the chords layer will extract information about chords: degree, type and inversion will lead to a given sequence on which to perform key estimation, and that will subsequently serve as basis for a series of transformations.
+
+
+
+c) I go on to describe the basic features that the tool could have, relating them to the texts in the snapshot:
+
+c1) the density transformer would work pretty much as daniel's... the main differences being that it has to work on a 2-bar length instead of one.
+
+c2) chord structure can be modified in two ways: (1) changing the color... i.e. number of notes in the chord keeping the same function and root; and (2) making substitutions, keeping the same function but changing the root... this can be diatonically or extend it into chromatic subsitutions.
+
+c3) a "register" control parameter would allow variations in the "width" of the chord, from closed position to an arbitrary number of octaves. If the "allow inversions" box is checked the lowest note could be other than the original; otherwise, the lower pitch class is mantained (although it can change octave depending on the register control.
+
+c4) the user can have also control on the voicings "activity," that is, to change the voicing+color+substitution at lower rates (no-change over time would be the first) to changing them on every onset. Discussing with Daniel, we had the intuition that we could use some of the rhythmic profiles he deals with to gradually allow for chord changes from less rhythmically-significant steps all the way up to total randomness.
+
+
+
+d) some limitations and assumptions:
+
+d1) I suggest limiting the length to 2-bar loops. This will make things faster for prototyping
+
+d2) Given this is NOT a deliverable about MIR or analysis. I propose to use a theory-driven approach to guide the harmonic substitutions and extensions... then see how this works.
+
+d3) Regarding the voicings, and in general, I suggest trying linearly distributed probabilities before entering into details of statistical analysis. This will help focusing on the interactive and generative part of the tool.
+ 
+
+well... I am sure there are many flows and inconsistencies that I (we) will see on the way, but it is a starting point on which we have certain key elements already working (symbolic chord detector, key detector, rhythm analiser and transformer...), and I think we are capable to present something along these lines for the deliverable that can serve us further... so now we would need to put this into a slide... in case it can be useful or interesting at all...
