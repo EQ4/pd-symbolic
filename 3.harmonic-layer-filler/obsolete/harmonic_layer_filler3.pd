@@ -1,0 +1,275 @@
+#N canvas 881 294 933 503 10;
+#X declare -path ../abs;
+#X obj 6 -31 cnv 15 250 70 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 18 10 hsl 225 15 0 200 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 12 -8 density;
+#X text 23 8 events/bar keeping pattern identity;
+#X obj 6 169 cnv 15 250 150 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 41 251 comment;
+#X obj 18 210 hsl 225 15 0 200 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 12 192 register;
+#X text 21 208 closed <<<<<< >>>>> open (4 octaves);
+#X text 13 274 allow inversions;
+#X obj 15 292 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 18 251 hsl 225 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 12 233 activity;
+#X obj 6 169 cnv 15 250 25 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#X obj 6 -31 cnv 15 250 25 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#X text 12 -28 DENSITY (agnostic density transformer);
+#X text 12 172 VOICING;
+#X obj 6 49 cnv 15 250 110 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 6 49 cnv 15 250 25 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#X text 62 52 CHORD STRUCTURE;
+#X obj 18 90 hsl 225 15 0 200 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 12 72 color;
+#X obj 18 131 hsl 225 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 12 113 substitution;
+#X text 31 129 no-subs <> diatonic <> chromatic;
+#X text 19 88 pow <> triad <> tension <> alteration;
+#X text 21 249 no-change <<<<>>>> change-each-event;
+#X obj 268 -31 cnv 15 350 25 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#X text 270 -29 LOAD REFERENCE MIDI CHORD LOOP (Still limited to 2
+bars):;
+#X obj 121 324 cnv 15 800 25 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 5 324 cnv 15 220 25 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#X text 7 326 REAL-TIME VAMP VARIATION**;
+#X text 7 353 ** no info displayed about voicing activity yet.;
+#N canvas 183 88 1475 904 patch 1;
+#X obj -158 566 noteout;
+#X msg -33 -129 flush;
+#X obj -38 179 midi_chord_estimator;
+#X obj -38 155 make_chord;
+#X obj -176 -150 path ../abs;
+#X floatatom 380 59 5 0 0 0 - - -;
+#X floatatom 357 82 5 0 0 0 - - -;
+#X text 461 11 tempo (bpm);
+#X text 419 58 real duration (in ticks);
+#X text 394 83 tentative length (to match complete beats!);
+#X obj 334 126 / 4;
+#X floatatom 334 149 5 0 0 0 - - -;
+#X obj 334 104 once;
+#X text 372 148 bars;
+#X obj 334 -22 unpack 0 0 0 0 0;
+#X floatatom 427 12 5 0 0 0 - - -;
+#X obj 168 128 unpack 0 0 0 0;
+#X obj 188 250 duple-change;
+#X obj 403 37 s ticks/4;
+#X obj 168 181 /;
+#X obj 183 159 r ticks/4;
+#X obj 257 161 != 0;
+#X obj 168 203 * 4;
+#X obj 168 224 + 1;
+#X obj 141 101 t l l;
+#X obj -33 -105 t a b;
+#X obj -6 -83 s reset-analysis;
+#X obj 85 455 t l;
+#X obj 0 431 list prepend;
+#X obj 69 408 r reset-analysis;
+#X obj 684 -126 cnv 15 180 63 empty empty 1-1 10 10 0 14 -204786 -66577
+0;
+#X obj 684 66 cnv 15 180 63 empty empty 1-4 10 10 0 14 -261234 -66577
+0;
+#X obj 684 2 cnv 15 180 63 empty empty 1-3 10 10 0 14 -261682 -66577
+0;
+#X obj 684 -62 cnv 15 180 63 empty empty 1-2 10 10 0 14 -262130 -66577
+0;
+#X obj 684 130 cnv 15 180 63 empty empty 2-1 10 10 0 14 -204786 -66577
+0;
+#X obj 684 322 cnv 15 180 63 empty empty 2-4 10 10 0 14 -261234 -66577
+0;
+#X obj 684 258 cnv 15 180 63 empty empty 2-3 10 10 0 14 -261682 -66577
+0;
+#X obj 684 194 cnv 15 180 63 empty empty 2-2 10 10 0 14 -262130 -66577
+0;
+#X symbolatom 739 -126 20 0 0 0 - set-c1 c1;
+#X symbolatom 739 -110 20 0 0 0 - set-c2 c2;
+#X symbolatom 739 -94 20 0 0 0 - set-c3 c3;
+#X symbolatom 739 -78 20 0 0 0 - set-c4 c4;
+#X symbolatom 739 -62 20 0 0 0 - set-c5 c5;
+#X symbolatom 739 -46 20 0 0 0 - set-c6 c6;
+#X symbolatom 739 -30 20 0 0 0 - set-c7 c7;
+#X symbolatom 739 -14 20 0 0 0 - set-c8 c8;
+#X symbolatom 739 2 20 0 0 0 - set-c9 c9;
+#X symbolatom 739 18 20 0 0 0 - set-c10 c10;
+#X symbolatom 739 34 20 0 0 0 - set-c11 c11;
+#X symbolatom 739 50 20 0 0 0 - set-c12 c12;
+#X symbolatom 739 66 20 0 0 0 - set-c13 c13;
+#X symbolatom 739 82 20 0 0 0 - set-c14 c14;
+#X symbolatom 739 98 20 0 0 0 - set-c15 c15;
+#X symbolatom 739 114 20 0 0 0 - set-c16 c16;
+#X symbolatom 739 130 20 0 0 0 - set-c17 c17;
+#X symbolatom 739 146 20 0 0 0 - set-c18 c18;
+#X symbolatom 739 162 20 0 0 0 - set-c19 c19;
+#X symbolatom 739 178 20 0 0 0 - set-c20 c20;
+#X symbolatom 739 194 20 0 0 0 - set-c21 c21;
+#X symbolatom 739 210 20 0 0 0 - set-c22 c22;
+#X symbolatom 739 226 20 0 0 0 - set-c23 c23;
+#X symbolatom 739 242 20 0 0 0 - set-c24 c24;
+#X symbolatom 739 258 20 0 0 0 - set-c25 c25;
+#X symbolatom 739 274 20 0 0 0 - set-c26 c26;
+#X symbolatom 739 290 20 0 0 0 - set-c27 c27;
+#X symbolatom 739 306 20 0 0 0 - set-c28 c28;
+#X symbolatom 739 322 20 0 0 0 - set-c29 c29;
+#X symbolatom 739 338 20 0 0 0 - set-c30 c30;
+#X symbolatom 739 354 20 0 0 0 - set-c31 c31;
+#X symbolatom 739 370 20 0 0 0 - set-c32 c32;
+#X obj 722 -126 vradio 16 1 0 32 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 407 338 f 1;
+#X obj 443 338 + 1;
+#X msg 422 315 1;
+#X obj 478 658 s;
+#X msg 608 422 symbol set-c\$1;
+#X obj -175 -53 openpanel;
+#X obj -175 -75 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -175 -30 read \$1;
+#X msg -35 -30 loop \$1;
+#X obj -35 -51 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj -95 -51 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg -95 -30 play \$1;
+#X msg 24 -31 quantize \$1;
+#X obj 24 -49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 105 -31 default = 1;
+#X obj -158 49 midi_player;
+#X obj -146 285 s end-analysis;
+#X obj 383 315 until;
+#X obj -91 173 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 395 291 t f b;
+#X obj 395 249 r end-analysis;
+#X obj -126 239 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1022 164 f 1;
+#X obj 1058 164 + 1;
+#X msg 1037 141 1;
+#X obj 1034 259 s;
+#X msg 1049 236 symbol set-c\$1;
+#X obj 1022 191 t b f;
+#X msg 1010 95 32;
+#X obj 998 141 until;
+#X obj 1010 117 t f b;
+#X obj 1010 75 r reset-analysis;
+#X obj 103 366 print flush;
+#X obj 188 300 route;
+#X obj 188 276 t l f;
+#X obj 478 433 r reset-analysis;
+#X obj 411 631 tosymbol;
+#X msg 488 454 const 10;
+#X obj 411 525 f;
+#X obj 407 363 t b f f;
+#X obj 411 548 change -100;
+#X obj 426 411 tabread fill-pattern;
+#X obj 188 322 tabwrite fill-pattern;
+#X msg 478 497 444;
+#X msg 395 269 34;
+#X obj 383 598 trim;
+#X obj 488 476 s fill-pattern;
+#X obj 411 571 sel 1 0;
+#X obj 1017 335 table fill-pattern 34;
+#X msg 1022 214 symbol %;
+#X msg 430 597 0;
+#X connect 1 0 25 0;
+#X connect 2 0 28 0;
+#X connect 3 0 2 0;
+#X connect 10 0 11 0;
+#X connect 12 0 10 0;
+#X connect 14 0 12 0;
+#X connect 14 1 6 0;
+#X connect 14 2 5 0;
+#X connect 14 3 18 0;
+#X connect 14 4 15 0;
+#X connect 16 0 19 0;
+#X connect 16 2 21 0;
+#X connect 17 0 103 0;
+#X connect 17 0 105 0;
+#X connect 19 0 22 0;
+#X connect 20 0 19 1;
+#X connect 21 0 17 1;
+#X connect 22 0 23 0;
+#X connect 23 0 17 0;
+#X connect 24 0 3 0;
+#X connect 24 1 16 0;
+#X connect 25 0 86 0;
+#X connect 25 1 26 0;
+#X connect 27 0 28 1;
+#X connect 28 0 27 0;
+#X connect 28 0 116 0;
+#X connect 29 0 28 1;
+#X connect 71 0 72 0;
+#X connect 71 0 110 0;
+#X connect 72 0 71 1;
+#X connect 73 0 71 1;
+#X connect 75 0 74 1;
+#X connect 76 0 78 0;
+#X connect 77 0 76 0;
+#X connect 78 0 86 0;
+#X connect 79 0 86 0;
+#X connect 80 0 79 0;
+#X connect 81 0 82 0;
+#X connect 82 0 86 0;
+#X connect 83 0 86 0;
+#X connect 84 0 83 0;
+#X connect 86 0 0 0;
+#X connect 86 1 24 0;
+#X connect 86 2 14 0;
+#X connect 86 3 89 0;
+#X connect 88 0 71 0;
+#X connect 90 0 88 0;
+#X connect 90 1 73 0;
+#X connect 91 0 115 0;
+#X connect 92 0 87 0;
+#X connect 93 0 94 0;
+#X connect 93 0 98 0;
+#X connect 94 0 93 1;
+#X connect 95 0 93 1;
+#X connect 97 0 96 1;
+#X connect 98 0 120 0;
+#X connect 98 1 97 0;
+#X connect 99 0 101 0;
+#X connect 100 0 93 0;
+#X connect 101 0 100 0;
+#X connect 101 1 95 0;
+#X connect 102 0 99 0;
+#X connect 104 0 113 0;
+#X connect 105 0 104 0;
+#X connect 105 1 104 1;
+#X connect 105 1 113 1;
+#X connect 106 0 108 0;
+#X connect 106 0 114 0;
+#X connect 107 0 74 0;
+#X connect 108 0 117 0;
+#X connect 109 0 111 0;
+#X connect 110 0 109 0;
+#X connect 110 1 112 0;
+#X connect 110 2 75 0;
+#X connect 111 0 118 0;
+#X connect 112 0 109 1;
+#X connect 114 0 109 1;
+#X connect 115 0 90 0;
+#X connect 116 0 107 0;
+#X connect 118 0 116 0;
+#X connect 118 1 121 0;
+#X connect 120 0 96 0;
+#X connect 121 0 107 0;
+#X restore 11 372 pd patch;
+#X text 13 397 https://github.com/angelfaraldo/pd-symbolic;
+#X text 13 412 angel.faraldo@upf.edu ----- Barcelona \, 2015;
