@@ -1,4 +1,4 @@
-#(set! paper-alist (cons '("my size" . (cons (* 22 cm) (* 3 cm))) paper-alist))
+#(set! paper-alist (cons '("my size" . (cons (* 11 cm) (* 3 cm))) paper-alist))
 
 \paper {
     #(set-paper-size "my size")
@@ -12,6 +12,7 @@
 
 \new RhythmicStaff
 \relative c'' {
+	\improvisationOn
+	\clef percussion
 	\numericTimeSignature
 	\bar ".|:"
-	\override Stem.direction = #DOWN

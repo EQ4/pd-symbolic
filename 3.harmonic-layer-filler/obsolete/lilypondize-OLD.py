@@ -1,14 +1,9 @@
-import re
 
 with open('./.lily_header.txt', 'r') as h:
     header = h.read()
 
 with open("./.lily_music.txt", 'r') as m:
     music = m.read()
-
-music = re.sub('once', '\once', music)
-music = re.sub('hide', '\hide', music)
-music = re.sub('NoteHead', '\NoteHead', music)
 
 with open("./.lily_footer.txt", 'r') as f:
     footer = f.read()
