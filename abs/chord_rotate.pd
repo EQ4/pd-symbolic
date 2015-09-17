@@ -1,12 +1,12 @@
-#N canvas 195 239 208 234 10;
+#N canvas 193 279 208 234 10;
 #X obj 17 7 inlet;
-#X obj 42 179 outlet;
+#X obj 44 179 outlet;
 #X obj 17 119 list;
 #X obj 17 27 sort;
-#X obj 55 111 list split 1;
-#X obj 15 159 t l l;
-#X obj 55 139 + 12;
-#X obj 55 159 list prepend;
+#X obj 60 111 list split 1;
+#X obj 17 159 t l l;
+#X obj 60 139 + 12;
+#X obj 60 159 list prepend;
 #X obj 17 47 t l l b;
 #X obj 17 67 list length;
 #X obj 17 87 until;

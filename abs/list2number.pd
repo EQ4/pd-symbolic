@@ -1,4 +1,4 @@
-#N canvas 816 114 306 180 10;
+#N canvas 814 126 306 180 10;
 #X obj -25 60 list2symbol;
 #X msg 38 39 symbol;
 #X obj -25 83 fromsymbol;

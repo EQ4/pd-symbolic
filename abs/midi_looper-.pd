@@ -1,6 +1,0 @@
-#N canvas 574 683 485 300 10;
-#X obj 120 223 outlet;
-#X obj 203 231 print sss;
-#X obj 202 78 metro;
-#X obj 257 45;
-#X obj 152 68 route;

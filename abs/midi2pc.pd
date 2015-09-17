@@ -1,4 +1,4 @@
-#N canvas 62 109 466 385 10;
+#N canvas 60 121 349 333 10;
 #X obj 52 11 inlet;
 #X obj 46 258 list;
 #X obj 10 205 ==;
@@ -12,8 +12,7 @@
 #X obj 52 33 t l b l;
 #X obj 46 280 outlet;
 #X obj 10 63 drip;
-#X obj 67 160 list prepend;
-#X obj 136 209 t l;
+#X obj 67 160 add2list prepend;
 #X connect 0 0 10 0;
 #X connect 1 0 11 0;
 #X connect 2 0 3 0;
@@ -32,5 +31,3 @@
 #X connect 10 2 9 0;
 #X connect 12 0 4 0;
 #X connect 13 0 1 1;
-#X connect 13 0 14 0;
-#X connect 14 0 13 1;
