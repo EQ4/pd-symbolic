@@ -1,4 +1,4 @@
-#N canvas 496 69 779 682 10;
+#N canvas 486 136 779 682 10;
 #X obj 98 93 t a a;
 #X obj 98 37 inlet;
 #X obj 32 40 inlet;
@@ -6,7 +6,7 @@
 #X obj 32 256 int;
 #X text 91 21 pattern;
 #X text 29 23 density;
-#N canvas 107 77 1106 669 cooked_salience 1;
+#N canvas 507 222 1188 660 cooked_salience 1;
 #X obj 30 33 inlet;
 #X obj 148 136 list split 1;
 #X obj 278 164 list split 1;
@@ -29,10 +29,10 @@
 #X msg 265 262 bang;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array \$0-salience 32 float 1;
-#A 0 -1 4 -3 6 -6 0.5 -6.5 1 -6 0.5 -6.5 1 -4 1.5 -5.5 3 -1 4 -3 6
--6 0.5 -6.5 1 -6 0.5 -6.5 1 -4 1.5 -5.5 3;
-#X coords 0 8 31 -8 200 140 1 0 0;
-#X restore 739 60 graph;
+#A 0 -1 15 -2 16 -13 3 -14 4 -5 11 -6 12 -9 7 -10 8 -3 13 -4 14 -15
+1 -16 2 -7 9 -8 10 -11 5 -12 6;
+#X coords 0 16 31 -16 200 140 1 0 0;
+#X restore 778 31 graph;
 #X obj 214 326 *;
 #X obj 166 586 outlet;
 #X text 409 19 find the salient notes of a rhythmic phrase;
@@ -98,7 +98,6 @@
 #X obj 30 52 t b b a a b b;
 #X obj 51 317 *;
 #X obj 51 345 int;
-#X text 959 231 salience x awareness;
 #X text 238 327 note (pre 0) weighted;
 #X obj 490 387 t b f f;
 #X obj 371 387 t f b f;
@@ -106,8 +105,13 @@
 #X msg 917 431 1;
 #X msg 1075 466 0;
 #X obj 477 278 t b b b b b b b;
-#X msg 603 217 \; salience 0 -1 4 -3 6 -6 0.5 -6.5 1 -6 0.5 -6.5 1
+#X msg 721 192 \; salience 0 -1 4 -3 6 -6 0.5 -6.5 1 -6 0.5 -6.5 1
 -4 1.5 -5.5 3 -1 4 -3 6 -6 0.5 -6.5 1 -6 0.5 -6.5 1 -4 1.5 -5.5 3;
+#X msg 751 260 -1 15 -2 16 -13 3 -14 4 -5 11 -6 12 -9 7 -10 8 -3 13
+-4 14 -15 1 -16 2 -7 9 -8 10 -11 5 -12 6;
+#X obj 751 301 tabset \$0-salience;
+#X text 1078 203 16x2;
+#X text 1121 262 32;
 #X connect 0 0 83 0;
 #X connect 1 0 82 0;
 #X connect 1 1 2 0;
@@ -123,7 +127,7 @@
 #X connect 10 0 8 0;
 #X connect 10 0 9 1;
 #X connect 11 0 22 0;
-#X connect 12 0 93 0;
+#X connect 12 0 92 0;
 #X connect 13 0 15 0;
 #X connect 14 0 11 0;
 #X connect 14 1 13 0;
@@ -165,8 +169,8 @@
 #X connect 51 0 50 0;
 #X connect 51 1 4 0;
 #X connect 52 0 32 0;
-#X connect 53 0 89 0;
-#X connect 53 1 88 0;
+#X connect 53 0 88 0;
+#X connect 53 1 87 0;
 #X connect 54 0 40 0;
 #X connect 55 0 53 0;
 #X connect 58 0 59 0;
@@ -208,23 +212,24 @@
 #X connect 83 5 18 0;
 #X connect 84 0 85 0;
 #X connect 85 0 74 0;
-#X connect 88 0 54 0;
-#X connect 88 1 32 0;
-#X connect 88 2 61 0;
-#X connect 89 0 40 0;
-#X connect 89 1 52 0;
-#X connect 89 2 67 0;
-#X connect 90 0 64 1;
-#X connect 91 0 58 1;
-#X connect 92 0 60 1;
-#X connect 92 0 66 1;
-#X connect 93 0 74 1;
-#X connect 93 1 10 1;
-#X connect 93 2 40 1;
-#X connect 93 3 32 1;
-#X connect 93 4 90 0;
-#X connect 93 5 91 0;
-#X connect 93 6 92 0;
+#X connect 87 0 54 0;
+#X connect 87 1 32 0;
+#X connect 87 2 61 0;
+#X connect 88 0 40 0;
+#X connect 88 1 52 0;
+#X connect 88 2 67 0;
+#X connect 89 0 64 1;
+#X connect 90 0 58 1;
+#X connect 91 0 60 1;
+#X connect 91 0 66 1;
+#X connect 92 0 74 1;
+#X connect 92 1 10 1;
+#X connect 92 2 40 1;
+#X connect 92 3 32 1;
+#X connect 92 4 89 0;
+#X connect 92 5 90 0;
+#X connect 92 6 91 0;
+#X connect 94 0 95 0;
 #X restore 125 112 pd cooked_salience;
 #X obj 188 135 l2s;
 #X symbolatom 306 115 40 0 0 0 - - -;

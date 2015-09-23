@@ -1,4 +1,4 @@
-#N canvas 540 154 618 158 10;
+#N canvas 538 166 618 158 10;
 #X declare -path ../abs;
 #X obj -491 -750 hradio 50 1 0 12 key_root set-key_root empty 0 -8
 0 10 -262144 -261234 -1 0;
@@ -14,15 +14,15 @@
 #X text 30 -733 Bb;
 #X text 80 -733 B;
 #X obj -101 -690 tgl 50 0 start set-start empty 17 7 0 10 -262144 -261234
--1 1 1;
+-1 0 1;
 #X text -91 -655 start;
 #X text -219 -733 F;
 #X obj -491 -690 hradio 50 1 0 4 bars set-bars empty 0 -8 0 10 -262144
--261234 -1 1;
+-261234 -1 0;
 #X obj -153 -690 tgl 50 0 make_new reset_seq empty 17 7 0 10 -262144
 -261234 -1 0 1;
 #X obj -286 -690 hsl 129 50 -1 1 0 0 register set-register empty -2
--8 0 10 -262144 -261234 -1 3900 1;
+-8 0 10 -262144 -261234 -1 6400 1;
 #X text -270 -672 low;
 #X text -470 -673 1;
 #X text -420 -673 2;
@@ -35,13 +35,13 @@
 #X obj -47 -664 cnv 15 50 20 empty empty house 0 12 0 17 -261234 -66577
 0;
 #X obj 9 -690 hradio 50 1 0 2 key_mode set-key_mode empty 0 -8 0 10
--262144 -261234 -1 0;
+-262144 -261234 -1 1;
 #X text 74 -674 min;
 #X text 24 -674 maj;
 #X text -488 -634 THIS PATCH GENERATES MIDI OUTPUT!;
 #X text -284 -634 YOU HAVE TO CONNECT IT TO A MIDI SYNTH TO LISTEN
 ;
-#N canvas 729 306 787 719 gutssssssssss 1;
+#N canvas 727 318 787 719 gutssssssssss 0;
 #X obj -101 -471 list-wrandom;
 #X obj -74 -109 + 0;
 #X msg -74 -68 \$1 120;
@@ -54,18 +54,15 @@
 #X obj -101 -450 t f f;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array tabla 25 float 1;
-#A 0 0.999995 0.999987 0.999965 0.999907 0.999752 0.999341 0.998252
-0.995372 0.987806 0.968261 0.919931 0.812272 0.619701 0.380299 0.187728
-0.0800693 0.0317386 0.0121941 0.00462753 0.00174779 0.00065894 0.000248261
-9.35105e-05 3.52184e-05 1.32637e-05;
+#A 0 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5
+0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5;
 #X coords 0 1 24 0 200 140 1 0 0;
 #X restore 57 -384 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array result 25 float 1;
-#A 0 0.0130588 0.0261175 0.0827035 0 0.0217594 0.0087002 0.0695258
-0.584932 0.0171995 0.109585 0.00400443 0.0530369 0.00539508 0.00165543
-0.00163434 0 0.000414471 0 0.000201435 6.84725e-05 0 7.56471e-06 0
-0 0;
+#A 0 0.0176991 0.00884955 0.0353982 0.0221239 0.00442478 0.0221239
+0 0.517699 0 0.0486726 0.119469 0.0132743 0.0663717 0 0.0309734 0.0221239
+0 0.0176991 0 0.039823 0 0 0.00884955 0 0.00442478;
 #X coords 0 1 24 0 200 140 1 0 0;
 #X restore 56 -384 graph;
 #X obj 127 -418 tabset result;
@@ -2080,7 +2077,7 @@ or less common according to our library.;
 #X obj -169 -361 r n_elements;
 #X obj -74 -406 t l l;
 #X obj -184 -338 ==;
-#N canvas 227 242 683 462 drumloop 0;
+#N canvas 225 254 683 462 drumloop 0;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array drumloop 341420 float 3;
 #A 0 -0.0284119 -0.0298157 -0.0283203 -0.0297546 -0.0326843 -0.0344238
