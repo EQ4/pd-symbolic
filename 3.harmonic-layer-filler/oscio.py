@@ -14,6 +14,7 @@ m1.setAddress("/print") # set OSC address
 m1.append(v1) # append message
 c.send(m1) # send it!
 
+
 import socket
 import time, threading
 
@@ -21,7 +22,6 @@ import time, threading
 # an /'error' handler, an '/info' handler.
 # And, if the client supports it, a '/subscribe' & '/unsubscribe' handler
 s.addDefaultHandlers()
-
 
 
 # define a message-handler function for the server to call.
